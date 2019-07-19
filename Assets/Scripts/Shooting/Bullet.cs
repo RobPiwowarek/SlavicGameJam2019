@@ -17,16 +17,11 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        Health enemy = other.collider.GetComponent<Health>();
+        AttackTarget enemy = other.collider.GetComponent<AttackTarget>();
         
         if (enemy)
         {
-            if (!enemy.IsDead)
-            {
-                Debug.Log(enemy.IsDead);
-                enemy.takeDamage(damage);
-
-            }
+           enemy.receiveDamage((int)this.damage);
         }
         
         Destroy(gameObject);

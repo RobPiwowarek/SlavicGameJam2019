@@ -5,7 +5,7 @@ public class ShootingEnemy: Enemy
 {
     [SerializeField] private Transform firePoint;
     public GameObject bullet;
-    private Boolean fire = false;
+    protected Boolean fire = false;
     protected override void TriggerAttack()
     {
         if (Input.GetButtonDown("Fire1"))

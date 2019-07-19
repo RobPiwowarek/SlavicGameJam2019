@@ -243,6 +243,8 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420030}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -258,6 +260,21 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
+--- !u!114 &519420030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abb5f6e2b834d4e808b78c231da95aca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player1Transform: {fileID: 179623180}
+  player2Transform: {fileID: 835233434}
+  cameraTransform: {fileID: 519420032}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -285,7 +302,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 7.1
+  orthographic size: 3.4672048
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -315,6 +332,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a4a3d15d785402e8e242c4c98ba13e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minSize: 3
+  maxSize: 6.5
+  epsilon: 0.05
+  player1Transform: {fileID: 179623180}
+  player2Transform: {fileID: 835233434}
 --- !u!1 &829065971
 GameObject:
   m_ObjectHideFlags: 0
@@ -510,7 +544,7 @@ PrefabInstance:
     - target: {fileID: 69351382496963899, guid: 550d8930c4b88f84294fb9e47e9b2566,
         type: 3}
       propertyPath: m_Name
-      value: kaczka (1)
+      value: kaczka 2
       objectReference: {fileID: 0}
     - target: {fileID: 69351382496963888, guid: 550d8930c4b88f84294fb9e47e9b2566,
         type: 3}
@@ -586,6 +620,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 69351382496963892, guid: 550d8930c4b88f84294fb9e47e9b2566,
+        type: 3}
+      propertyPath: moveCode
+      value: Horizontal_Joystick
+      objectReference: {fileID: 0}
+    - target: {fileID: 69351382496963892, guid: 550d8930c4b88f84294fb9e47e9b2566,
+        type: 3}
+      propertyPath: jumpCode
+      value: Jump_Joystick
+      objectReference: {fileID: 0}
+    - target: {fileID: 69351382496963889, guid: 550d8930c4b88f84294fb9e47e9b2566,
+        type: 3}
+      propertyPath: fireCode
+      value: Fire2_Joystick
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 550d8930c4b88f84294fb9e47e9b2566, type: 3}
@@ -887,6 +936,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 69351382496963892, guid: 550d8930c4b88f84294fb9e47e9b2566,
+        type: 3}
+      propertyPath: moveCode
+      value: Horizontal
+      objectReference: {fileID: 0}
+    - target: {fileID: 69351382496963892, guid: 550d8930c4b88f84294fb9e47e9b2566,
+        type: 3}
+      propertyPath: jumpCode
+      value: Jump
+      objectReference: {fileID: 0}
+    - target: {fileID: 69351382496963889, guid: 550d8930c4b88f84294fb9e47e9b2566,
+        type: 3}
+      propertyPath: fireCode
+      value: Fire2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 550d8930c4b88f84294fb9e47e9b2566, type: 3}

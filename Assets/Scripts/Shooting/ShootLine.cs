@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,10 +10,11 @@ public class ShootLine : MonoBehaviour
     public Transform firePoint;
     public CameraShake shake = null;
     public float shakeDuration = 0.25f;
+    public String fireCode;
     
     void Update()
     {
-        if (Input.GetButtonDown("Fire2"))
+        if (Input.GetButtonDown(fireCode))
         {
             
             StartCoroutine(Shoot());

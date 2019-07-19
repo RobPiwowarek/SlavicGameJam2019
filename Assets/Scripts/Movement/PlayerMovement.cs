@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,6 +8,8 @@ public class PlayerMovement : MonoBehaviour
     public CharacterController2D controller; // publiczne sa widoczne w unity
 
     public float runSpeed = 40f;
+    public String moveCode;
+    public String jumpCode;
 
     float horizontalMove = 0f;
     bool jump = false;
@@ -21,8 +24,8 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         //Debug.Log("logowac mozna tak");
-        horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;   // lewo -1 1 prawo 
-        if (Input.GetButtonDown("Jump")) // czemu jump? edit -> project settings -> input
+        horizontalMove = Input.GetAxisRaw(moveCode) * runSpeed;   // lewo -1 1 prawo 
+        if (Input.GetButtonDown(jumpCode)) // czemu jump? edit -> project settings -> input
         {
             jump = true;
         }

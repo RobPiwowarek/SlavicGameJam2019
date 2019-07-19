@@ -19,10 +19,7 @@ public class Bullet : MonoBehaviour
     {
         AttackTarget enemy = other.collider.GetComponent<AttackTarget>();
         
-        if (enemy)
-        {
-           enemy.receiveDamage((int)this.damage);
-        }
+        enemy?.ReceiveDamage((int)this.damage);
         
         Destroy(gameObject);
     }

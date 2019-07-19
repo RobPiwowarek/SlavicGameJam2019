@@ -1,9 +1,6 @@
 using UnityEngine;
 
-public class AttackTarget: MonoBehaviour
+public interface AttackTarget
 {
-    public void receiveDamage(int dmg)
-    {
-        Debug.Log("Received " + dmg + " of damage");
-    }
+    void ReceiveDamage(int dmg);
 }

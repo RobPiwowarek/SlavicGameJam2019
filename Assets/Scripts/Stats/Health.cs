@@ -6,6 +6,7 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     public float healthPoints = 50;
+    public float maxHealthPoints = 50;
     private Boolean isDead;
 
     public void takeDamage(float damage)
@@ -14,6 +15,16 @@ public class Health : MonoBehaviour
 
         if (healthPoints < 0)
             isDead = true;
+    }
+
+    public void restoreHealth(float health)
+    {
+        if (health + healthPoints > maxHealthPoints)
+            healthPoints = maxHealthPoints;
+        else
+        {
+            healthPoints = healthPoints + health;
+        }
     }
 
     public void Update()

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ShootLine : MonoBehaviour
 {
+    public float damage = 5f;
     public LineRenderer line;
     public Transform firePoint;
     
@@ -23,6 +24,10 @@ public class ShootLine : MonoBehaviour
         {
             line.SetPosition(0, firePoint.position);
             line.SetPosition(1, hit.point);
+
+            Health health = hit.transform.GetComponent<Health>();
+            if (health != null)
+                health.takeDamage(damage);
         }
         else
         {

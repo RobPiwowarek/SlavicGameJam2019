@@ -3,13 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Health : MonoBehaviour, AttackTarget
+public class Health : AttackTarget
 {
     public float healthPoints = 50;
     public float maxHealthPoints = 50;
     private Boolean isDead;
 
-    public void ReceiveDamage(int dmg)
+    public override void ReceiveDamage(int dmg)
     {
         this.takeDamage(dmg);
     }

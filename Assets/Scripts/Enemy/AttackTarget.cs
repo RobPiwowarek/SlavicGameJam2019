@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public interface AttackTarget
+public abstract class AttackTarget: MonoBehaviour
 {
-    void ReceiveDamage(int dmg);
+    public abstract void ReceiveDamage(int dmg);
 }

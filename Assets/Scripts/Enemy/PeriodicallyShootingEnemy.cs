@@ -21,4 +21,8 @@ public class PeriodicallyShootingEnemy : ShootingEnemy
             yield return new WaitForSeconds(seconds);
         }
     }
+    
+    protected override void TriggerAttack()
+    {
+    }
 }

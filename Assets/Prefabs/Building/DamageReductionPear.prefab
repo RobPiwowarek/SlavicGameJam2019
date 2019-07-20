@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8078211527580317845}
   - component: {fileID: 744273764914301506}
   - component: {fileID: 1479078221150280766}
+  - component: {fileID: 292918047100656865}
   m_Layer: 0
   m_Name: DamageReductionPear
   m_TagString: Untagged
@@ -27,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 8078211527580317846}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.5262025, y: -0.090132535, z: -9.3221445}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 8078211529021594630}
   m_Father: {fileID: 0}
@@ -59,6 +60,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthPoints: 1000
   maxHealthPoints: 1000
+--- !u!114 &292918047100656865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8078211527580317846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a877ac8fca91425ebd08f573ef30b1b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levels:
+  - cost: 0
+    visualization: {fileID: 8078211527580317846}
+    maxHealth: 100
 --- !u!1 &8078211529021594631
 GameObject:
   m_ObjectHideFlags: 0

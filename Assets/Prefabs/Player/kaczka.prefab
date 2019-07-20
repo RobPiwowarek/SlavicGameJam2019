@@ -137,7 +137,7 @@ MonoBehaviour:
   runSpeed: 40
   moveCode: Horizontal
   jumpCode: Jump
-  ladderMoveCode: 
+  ladderMoveCode: Vertical
 --- !u!114 &69351382496963889
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -155,7 +155,7 @@ MonoBehaviour:
   firePoint: {fileID: 69351384350362161}
   shake: {fileID: 0}
   shakeDuration: 0.25
-  fireCode: 
+  fireCode: Fire1
 --- !u!114 &6126741538456370726
 MonoBehaviour:
   m_ObjectHideFlags: 0

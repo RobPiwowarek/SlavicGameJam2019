@@ -48,7 +48,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0
   rigidbody: {fileID: 8507244022281239976}
-  damage: 50
+  damage: 25
+  splashRadius: 100
+  damageModifier: 0.5
 --- !u!50 &8507244022281239976
 Rigidbody2D:
   serializedVersion: 4

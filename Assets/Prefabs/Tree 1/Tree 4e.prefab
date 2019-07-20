@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2456134472159435434}
   - component: {fileID: 1288875553424494669}
   - component: {fileID: 4793957131377080610}
+  - component: {fileID: 2084269678}
   m_Layer: 8
   m_Name: Tree 4e
   m_TagString: Untagged
@@ -111,3 +112,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextForms: []
   currentLevel: 3
+--- !u!68 &2084269678
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2456134472159435432}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: 17.057852, y: -0.61500955}
+  - {x: 16.995811, y: -0.702143}
+  - {x: 12.1070795, y: -0.8307029}
+  - {x: 12.106214, y: -0.019128144}
+  - {x: 13.600677, y: 0.025475563}
+  - {x: 13.784329, y: 0.31538746}
+  - {x: 13.893606, y: 2.4005916}
+  - {x: 14.0845785, y: 2.4952016}
+  - {x: 14.014833, y: 1.5193511}
+  - {x: 14.18845, y: 1.4457419}
+  - {x: 16.66134, y: 1.381391}
+  - {x: 16.349876, y: 1.2255582}
+  - {x: 14.708337, y: 1.1006552}
+  - {x: 14.120572, y: 0.9230078}
+  - {x: 14.12044, y: -0.015798418}
+  - {x: 14.448915, y: -0.36069402}
+  - {x: 16.729553, y: -0.42522526}
+  - {x: 17.05694, y: -0.61940116}

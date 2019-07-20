@@ -139,7 +139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthPoints: 100
-  maxHealthPoints: 50
+  maxHealthPoints: 100
 --- !u!114 &6566552273092957655
 MonoBehaviour:
   m_ObjectHideFlags: 0

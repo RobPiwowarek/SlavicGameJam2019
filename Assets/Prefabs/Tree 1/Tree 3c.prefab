@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6507530543773125729}
   - component: {fileID: 2415554047800075186}
   - component: {fileID: 5884852711658863823}
+  - component: {fileID: 1333008742}
   m_Layer: 8
   m_Name: Tree 3c
   m_TagString: Untagged
@@ -111,5 +112,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c47e608c6408c9409e974bb372d8a35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthPoints: 100
-  maxHealthPoints: 100
+  healthPoints: 50
+  maxHealthPoints: 50
+--- !u!68 &1333008742
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6507530543773125731}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: 1.0525271, y: 1.1327944}
+  - {x: 5.2259073, y: 1.1086508}
+  - {x: 5.6253386, y: 0.6917696}
+  - {x: 5.8197117, y: -0.44315457}
+  - {x: 6.3018255, y: -0.7044393}
+  - {x: 7.284301, y: -0.7119233}
+  - {x: 7.558345, y: -0.44591105}
+  - {x: 7.670894, y: 0.12210575}
+  - {x: 8.614874, y: 0.1755247}
+  - {x: 8.755055, y: -0.05893546}
+  - {x: 12.351988, y: -0.08791405}
+  - {x: 12.747017, y: -0.24894539}
+  - {x: 13.038931, y: -0.41361493}
+  - {x: 13.075213, y: -0.7075449}
+  - {x: 8.990667, y: -0.9589327}
+  - {x: 8.113944, y: -1.7727937}
+  - {x: 5.057946, y: -1.8093748}
+  - {x: 4.5423846, y: -1.4928937}
+  - {x: 4.286712, y: -0.26572362}
+  - {x: 2.2494729, y: -0.09483167}
+  - {x: 1.0782994, y: -0.12234562}
+  - {x: 1.0567713, y: 1.1172688}

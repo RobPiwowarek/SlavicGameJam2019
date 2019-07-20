@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5267019702819064406}
   - component: {fileID: 8189763094281966425}
   - component: {fileID: 125056593310729484}
+  - component: {fileID: 386977430}
   m_Layer: 8
   m_Name: Tree 4d
   m_TagString: Untagged
@@ -111,3 +112,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextForms: []
   currentLevel: 3
+--- !u!68 &386977430
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5267019702819064400}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: 7.641516, y: 0.1241604}
+  - {x: 7.798806, y: 1.331679}
+  - {x: 8.09249, y: 1.7438993}
+  - {x: 8.567055, y: 1.9987115}
+  - {x: 9.2618265, y: 2.0691028}
+  - {x: 11.739791, y: 2.0329037}
+  - {x: 12.007447, y: 1.9539852}
+  - {x: 10.721152, y: 1.8238387}
+  - {x: 10.201065, y: 1.5734084}
+  - {x: 8.807924, y: 1.3232967}
+  - {x: 8.60873, y: 0.11311213}
+  - {x: 7.6378727, y: 0.11261816}

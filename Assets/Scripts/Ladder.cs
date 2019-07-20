@@ -18,7 +18,14 @@ public class Ladder : MonoBehaviour
 
         if (rb)
         {
-            rb.gravityScale = 1f;
+            rb.gravityScale = 0f;
+        }
+        
+        BoxCollider2D coll = other.transform.GetComponent<BoxCollider2D>();
+
+        if (coll)
+        {
+            coll.isTrigger = true;
         }
     }
 
@@ -34,7 +41,15 @@ public class Ladder : MonoBehaviour
 
         if (rb)
         {
-            rb.gravityScale = 0f;
+            rb.gravityScale = 1f;
+            rb.velocity = new Vector3(rb.velocity.x, 0, 0);
+        }
+        
+        BoxCollider2D coll = other.transform.GetComponent<BoxCollider2D>();
+
+        if (coll)
+        {
+            coll.isTrigger = false;
         }
     }
 }

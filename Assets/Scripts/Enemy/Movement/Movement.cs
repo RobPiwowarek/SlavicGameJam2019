@@ -1,4 +1,5 @@
 using UnityEngine;
+using Quaternion = System.Numerics.Quaternion;
 
 public abstract class Movement : MonoBehaviour
 {
@@ -9,8 +10,7 @@ public abstract class Movement : MonoBehaviour
         this.attackTarget = _attackTarget;
     }
 
-    public virtual Vector3 Move(Vector3 current)
-    {
-        return current;
-    }
+    public abstract Vector2 Move(Vector2 current);
+
+    public abstract UnityEngine.Quaternion Rotate(Vector2 current);
 }

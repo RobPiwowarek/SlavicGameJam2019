@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1923603672975981700
+--- !u!1 &4320732155678085434
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,41 +8,39 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7736710707765970606}
-  - component: {fileID: 5798523573922910816}
+  - component: {fileID: 7783124079809841643}
+  - component: {fileID: 3079882442920866223}
   m_Layer: 0
-  m_Name: FollowingEnemy
+  m_Name: BombingEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7736710707765970606
+--- !u!4 &7783124079809841643
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1923603672975981700}
+  m_GameObject: {fileID: 4320732155678085434}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.512462, y: -0.34546864, z: -8.789442}
+  m_LocalPosition: {x: -0.15728933, y: 1.6438887, z: -40.503906}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5798523573922910816
+--- !u!114 &3079882442920866223
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1923603672975981700}
+  m_GameObject: {fileID: 4320732155678085434}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07b16ca9469d4f06a18784d5d24dcbc9, type: 3}
+  m_Script: {fileID: 11500000, guid: 366f6a91895d432a800128d466bc4636, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minimumDistance: 15
-  distanceBuffer: 1
-  speed: 1
+  seconds: 1

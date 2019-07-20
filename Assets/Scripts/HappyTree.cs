@@ -9,7 +9,7 @@ public class HappyTree : MonoBehaviour
     public MasterList values;
 
     private float _time = 0f;
-    private float advanceTime = 5f;
+    private float advanceTime = 2f;
 
     public void AdvanceLevel()
     {
@@ -20,6 +20,8 @@ public class HappyTree : MonoBehaviour
             o.AdvanceLevel();
         }
         _currentLevel++;
+        
+        AstarPath.active.Scan();
     }
 
 

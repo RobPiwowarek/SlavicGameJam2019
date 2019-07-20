@@ -41,8 +41,8 @@ GameObject:
   - component: {fileID: 607868206001488175}
   - component: {fileID: 607868206001488160}
   - component: {fileID: 2451355197197097344}
-  - component: {fileID: 2550984910864533973}
   - component: {fileID: 172997062}
+  - component: {fileID: -6989819073429648054}
   m_Layer: 8
   m_Name: Tree 1
   m_TagString: Untagged
@@ -129,23 +129,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthPoints: 50
   maxHealthPoints: 50
---- !u!114 &2550984910864533973
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 607868206001488162}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4bdab99cc2f0643faadf8ca91139c79b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nextForms:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  currentLevel: 0
 --- !u!68 &172997062
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -182,3 +165,48 @@ EdgeCollider2D:
   - {x: -3.235444, y: -4.5976124}
   - {x: -5.720107, y: -4.476378}
   - {x: -5.806188, y: -3.7875812}
+--- !u!114 &-6989819073429648054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607868206001488162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a36c5250ffb3346ca96b6398736d411c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _currentLevel: 0
+  values:
+    list:
+    - ContainedList:
+      - {fileID: 5246315630780996118, guid: 6edb540d7453c4b6bb78fb69f0960780, type: 3}
+    - ContainedList:
+      - {fileID: 6429264255339599200, guid: 48c2b90db28734338bc16dadadd74938, type: 3}
+    - ContainedList:
+      - {fileID: 8760929450996297319, guid: 7991387548de84c5fb7bec7689a9ef65, type: 3}
+    - ContainedList:
+      - {fileID: 0}
+    - ContainedList:
+      - {fileID: 0}
+    - ContainedList:
+      - {fileID: 0}
+    - ContainedList:
+      - {fileID: 0}
+    - ContainedList:
+      - {fileID: 0}
+    - ContainedList:
+      - {fileID: 0}
+    - ContainedList:
+      - {fileID: 0}
+    - ContainedList:
+      - {fileID: 0}
+    - ContainedList:
+      - {fileID: 0}
+    - ContainedList:
+      - {fileID: 0}
+    - ContainedList:
+      - {fileID: 0}
+    - ContainedList:
+      - {fileID: 0}

@@ -7,23 +7,26 @@ public class Builder : MonoBehaviour
 {
     public GameObject buildPrefab;
     private GameObject build;
+
+    private HappyTreeGameManager gameManager;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameManager = GameObject.Find("HappyTreeGameManager").GetComponent<HappyTreeGameManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
     }
+
     private bool CanPlaceBuild()
     {
         int cost = buildPrefab.GetComponent<BuildData>().levels[0].cost;
-        return build == null; //&& gameManager.Money >= cost; 
+        return build == null && gameManager.Money >= cost; 
     }
-    
+
     private bool CanUpgradeBuild()
     {
         if (build != null)
@@ -32,33 +35,33 @@ public class Builder : MonoBehaviour
             BuildLevel nextLevel = buildData.GetNextLevel();
             if (nextLevel != null)
             {
-                return true; //gameManager.Money >= nextLevel.cost;
+                return gameManager.Money >= nextLevel.cost;
             }
         }
+
         return false;
     }
+
     private void OnTriggerStay2D(Collider2D other)
     {
         if (Input.GetButtonDown("ActionButton"))
         {
-//            var basicBuild = Instantiate ( buildPrefab, gameObject.transform );
-//            basicBuild.transform.parent = gameObject.transform;
             if (CanPlaceBuild())
             {
                 build = (GameObject) Instantiate(buildPrefab, transform.position, Quaternion.identity);
                 build.transform.parent = gameObject.transform;
-                //gameManager.Money -= build.GetComponent<BuildData>().CurrentLevel.cost;
+                gameManager.Money -= build.GetComponent<BuildData>().CurrentLevel.cost;
             }
             else if (CanUpgradeBuild())
             {
-                Debug.Log(build.GetComponent<BuildData>().CurrentLevel.ToString());
+                var currentMaxHealth = build.GetComponent<BuildData>().CurrentMaxHealth;
+                var currentHealth = build.GetComponent<Health>().healthPoints;
                 build.GetComponent<BuildData>().IncreaseLevel();
                 var levelMaxHealth = build.GetComponent<BuildData>().CurrentMaxHealth;
                 build.GetComponent<Health>().maxHealth = levelMaxHealth;
-
-                //gameManager.Money -= build.GetComponent<BuildData>().CurrentLevel.cost;
+                build.GetComponent<Health>().restoreHealth(levelMaxHealth - currentMaxHealth);
+                gameManager.Money -= build.GetComponent<BuildData>().CurrentLevel.cost;
             }
         }
     }
-
 }

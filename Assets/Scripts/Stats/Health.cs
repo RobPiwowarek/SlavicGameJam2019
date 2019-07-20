@@ -35,15 +35,12 @@ public class Health : AttackTarget
     public float maxHealth
     {
         get { throw new NotImplementedException(); }
-        set
-        {
-            maxHealthPoints = value;
-        }
+        set { maxHealthPoints = value; }
     }
 
     public void Update()
     {
-        if (isDead) 
+        if (isDead)
             Destroy(gameObject);
     }
 

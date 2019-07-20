@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,7 +12,12 @@ public class HappyTreeGameManager : MonoBehaviour
     public Text moneyLabel;
 
     private float money;
-    
+
+    public void Start()
+    {
+        Money = 1000;
+    }
+
     public float Money
     {
         get
@@ -21,7 +27,7 @@ public class HappyTreeGameManager : MonoBehaviour
         set
         {
             money = value;
-            moneyLabel.GetComponent<Text>().text = "Money: " + money;
+            //moneyLabel.GetComponent<Text>().text = "Money: " + money;
         }
     }
     

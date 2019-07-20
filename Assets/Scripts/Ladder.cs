@@ -5,31 +5,36 @@ using UnityEngine;
 
 public class Ladder : MonoBehaviour
 {
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        throw new NotImplementedException();
+        CharacterController2D cc = other.transform.GetComponent<CharacterController2D>();
+        if (cc)
+        {
+            cc.onLadder = true;
+        }
+        
+        Rigidbody2D rb = other.transform.GetComponent<Rigidbody2D>();
+
+        if (rb)
+        {
+            rb.gravityScale = 1f;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        throw new NotImplementedException();
-    }
+        CharacterController2D cc = other.transform.GetComponent<CharacterController2D>();
+        if (cc)
+        {
+            cc.onLadder = false;
+        }
 
-    private void OnTriggerStay2D(Collider2D other)
-    {
-        throw new NotImplementedException();
+        Rigidbody2D rb = other.transform.GetComponent<Rigidbody2D>();
+
+        if (rb)
+        {
+            rb.gravityScale = 0f;
+        }
     }
 }

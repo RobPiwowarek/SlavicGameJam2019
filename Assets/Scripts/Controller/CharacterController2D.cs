@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.Events;
 
 public class CharacterController2D : MonoBehaviour
@@ -27,8 +28,10 @@ public class CharacterController2D : MonoBehaviour
     private Transform m_CeilingCheck;                           
     [SerializeField]
     // A collider that will be disabled when crouching
-    private Collider2D m_CrouchDisableCollider;             
+    private Collider2D m_CrouchDisableCollider;
 
+    [SerializeField] public Boolean onLadder = false;
+    
     // Radius of the overlap circle to determine if grounded
     const float k_GroundedRadius = .2f; 
     // Whether or not the player is grounded.
@@ -98,7 +101,6 @@ public class CharacterController2D : MonoBehaviour
         //only control the player if grounded or airControl is turned on
         if (m_Grounded || m_AirControl)
         {
-
             // If crouching
             if (crouch)
             {

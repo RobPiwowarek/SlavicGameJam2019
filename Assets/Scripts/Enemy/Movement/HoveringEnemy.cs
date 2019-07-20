@@ -6,12 +6,32 @@ public class HoveringEnemy: Movement
     [SerializeField] protected float distanceBuffer;
     [SerializeField] protected float yDistance;
     [SerializeField] protected float speed;
+    
+    // Hover parameters
     [SerializeField] private float Amplitude;
     
+    // Scanning parameters
+    [SerializeField] private bool goRight = true ;
+    [SerializeField] private float scanDistance;
+    [SerializeField] private Vector2 scanRightPosition;
+    [SerializeField] private Vector2 scanLeftPosition;
+
+    [SerializeField] private Enemy enemy;
+
+    public void Start()
+    {
+        this.enemy = GetComponentInParent<Enemy>();
+    }
+
     public override Vector2 Move(Vector2 current)
     {
         if (attackTarget)
         {
+            if (this.enemy) this.enemy.idle = false;
+            
+            scanRightPosition = new Vector2(current.x + scanDistance, current.y);
+            scanLeftPosition = new Vector2(current.x - scanDistance, current.y);
+
             Vector2 targetPosition = attackTarget.transform.position;
         
             if (Math.Abs(attackTarget.transform.position.x - current.x) > distanceBuffer || 
@@ -37,11 +57,38 @@ public class HoveringEnemy: Movement
 
                 return result;
             }
+            
+            return new Vector2(current.x, current.y + Amplitude * Mathf.Sin(speed * Time.fixedTime));
+        }
+        else
+        {
+            enemy.idle = true;
         }
 
-        return new Vector2(current.x, current.y + Amplitude * Mathf.Sin(speed * Time.fixedTime));
+
+        if (goRight && enemy)
+        {
+            if ((current - scanRightPosition).sqrMagnitude < distanceBuffer)
+            {
+                goRight = false;
+                enemy.flipped = true;
+            }
+            return Vector2.MoveTowards(current, scanRightPosition,
+                speed * Time.fixedDeltaTime);
+        }
+        else if (enemy)
+        {
+            if ((current - scanLeftPosition).sqrMagnitude < distanceBuffer)
+            {
+                goRight = true;
+                enemy.flipped = false;
+            }
+            return Vector2.MoveTowards(current, scanLeftPosition,
+                speed * Time.fixedDeltaTime);
+        }
 
         return current;
+
     }
 
     public override UnityEngine.Quaternion Rotate(Vector2 current)

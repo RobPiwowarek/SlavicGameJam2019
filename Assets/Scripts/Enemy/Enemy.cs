@@ -16,7 +16,8 @@ public class Enemy : MonoBehaviour
     [SerializeField] protected Transform firePoint;
     [SerializeField] protected GameObject bullet;
 
-    [SerializeField] private bool flipped = false;
+    [SerializeField] public bool flipped = false;
+    [SerializeField] public bool idle = false;
 
     private void initializeBehaviors()
     {

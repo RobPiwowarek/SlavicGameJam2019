@@ -47,3 +47,8 @@ MonoBehaviour:
   yDistance: 3
   speed: 2
   Amplitude: 0.005
+  goRight: 1
+  scanDistance: 2
+  scanStartPosition: {x: 0, y: 0}
+  scanRightPosition: {x: 0, y: 0}
+  scanLeftPosition: {x: 0, y: 0}

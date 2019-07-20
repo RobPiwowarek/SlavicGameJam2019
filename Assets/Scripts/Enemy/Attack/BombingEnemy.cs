@@ -3,9 +3,14 @@ using UnityEngine;
 
 public class BombingEnemy : PeriodicallyShootingEnemy
 {
+
+    private Enemy enemy;
+    private AttackTarget attackTarget;
+    
     public override void Attack()
     {
-        AttackTarget attackTarget= this.GetComponentInParent<Enemy>().attackTarget;
+        this.enemy = this.GetComponentInParent<Enemy>();
+        if (this.enemy) this.attackTarget = enemy.attackTarget;
         
         if (attackTarget)
         {
@@ -14,8 +19,6 @@ public class BombingEnemy : PeriodicallyShootingEnemy
         
             if (fire && distance < 1.0f)
             {
-                Debug.Log("BOMB");
-                // TODO: drop bomb only above tower or something
                 Transform obj = Instantiate(bullet, firePoint.position, firePoint.rotation).GetComponent<Transform>();
             }
         

@@ -46,3 +46,4 @@ MonoBehaviour:
   distanceBuffer: 0.5
   yDistance: 3
   speed: 2
+  Amplitude: 0.005

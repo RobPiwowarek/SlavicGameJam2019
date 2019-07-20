@@ -40,7 +40,6 @@ public class CameraShake : MonoBehaviour
         else
         {
             shakeDuration = 0f;
-            camTransform.localPosition = originalPos;
         }
     }
 }

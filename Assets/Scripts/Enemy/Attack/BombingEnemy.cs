@@ -14,7 +14,6 @@ public class BombingEnemy : PeriodicallyShootingEnemy
         
             if (fire && distance < 1.0f)
             {
-                Debug.Log("BOMB");
                 // TODO: drop bomb only above tower or something
                 Transform obj = Instantiate(bullet, firePoint.position, firePoint.rotation).GetComponent<Transform>();
             }

@@ -6,8 +6,6 @@ using System.Linq;
 
 public class OffensiveBuildData : MonoBehaviour
 {
-
-    [SerializeField] private Transform buildingTransform;
     [SerializeField] private GameObject bullet;
     [SerializeField] private float seconds;
     [SerializeField] private Transform firePoint;

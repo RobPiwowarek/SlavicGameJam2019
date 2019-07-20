@@ -17,10 +17,16 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
+        this.applyDamage(other);
+        
+        Destroy(gameObject);
+    }
+
+    protected virtual void applyDamage(Collision2D other)
+    {
         AttackTarget enemy = other.collider.GetComponent<AttackTarget>();
         
         enemy?.ReceiveDamage((int)this.damage);
         
-        Destroy(gameObject);
     }
 }

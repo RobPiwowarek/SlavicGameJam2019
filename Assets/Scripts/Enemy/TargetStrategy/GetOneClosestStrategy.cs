@@ -33,7 +33,7 @@ public class GetOneClosestStrategy : TargetSearchStrategy
     private void RescanAttackTargets()
     {
         this.attackTargets = FindObjectsOfType<AttackTarget>()
-            .Where(t => t.isActiveAndEnabled && this.isActiveAndEnabled && t.transform.position != playerPosition.position && t.CompareTag("Building"))
+            .Where(t => t.transform.position != playerPosition.position && t.CompareTag("Building"))
             .OrderBy(t => (t.transform.position - playerPosition.position).sqrMagnitude)
             .ToList();
     }

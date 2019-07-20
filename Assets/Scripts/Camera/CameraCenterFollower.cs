@@ -6,6 +6,8 @@ using UnityEngine.UIElements;
 
 public class CameraCenterFollower : MonoBehaviour
 {
+    [SerializeField] private float YcameraCenterOffset;
+    
     public Transform player1Transform;
     public Transform player2Transform;
 
@@ -25,6 +27,7 @@ public class CameraCenterFollower : MonoBehaviour
     {
         _cameraPosition = _cameraTransform.position;
         Vector3 centerPoint = (player1Transform.position + player2Transform.position) / 2;
+        centerPoint.y += YcameraCenterOffset;
         var cameraX = _cameraPosition.x;
         var cameraY = _cameraPosition.y;
         _time += Time.deltaTime;

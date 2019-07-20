@@ -3545,6 +3545,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree 2a
       objectReference: {fileID: 0}
+    - target: {fileID: 354711178289786630, guid: 6edb540d7453c4b6bb78fb69f0960780,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 354711178289786629, guid: 6edb540d7453c4b6bb78fb69f0960780,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3600,6 +3605,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 354711178289786628, guid: 6edb540d7453c4b6bb78fb69f0960780,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6edb540d7453c4b6bb78fb69f0960780, type: 3}
 --- !u!1001 &3595761593966886973
@@ -3613,6 +3623,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tree 4a
+      objectReference: {fileID: 0}
+    - target: {fileID: 3595761593767163563, guid: 68b666844e10446b2a9bbb7301e8f100,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3595761593767163556, guid: 68b666844e10446b2a9bbb7301e8f100,
         type: 3}
@@ -3682,6 +3697,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tree 5a
+      objectReference: {fileID: 0}
+    - target: {fileID: 3797932491175247666, guid: 7153ad936140240afab995f5b274b2dc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3797932491175247665, guid: 7153ad936140240afab995f5b274b2dc,
         type: 3}
@@ -3770,6 +3790,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree 3a
       objectReference: {fileID: 0}
+    - target: {fileID: 7612500039431752410, guid: 5bb0a9134aeb14be490f490651aa7a00,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7612500039431752409, guid: 5bb0a9134aeb14be490f490651aa7a00,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3828,7 +3853,7 @@ PrefabInstance:
     - target: {fileID: 7612500039431752408, guid: 5bb0a9134aeb14be490f490651aa7a00,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5bb0a9134aeb14be490f490651aa7a00, type: 3}

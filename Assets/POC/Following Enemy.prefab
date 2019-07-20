@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &868374234044809956
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8444131723660760317}
+  m_Layer: 0
+  m_Name: fire point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8444131723660760317
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 868374234044809956}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.0009, y: -0.0622, z: 0}
+  m_LocalScale: {x: 0.05, y: 0.05, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7498960181629804673}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7498960181629804677
 GameObject:
   m_ObjectHideFlags: 0
@@ -12,6 +42,7 @@ GameObject:
   - component: {fileID: 7498960181629804672}
   - component: {fileID: 7498960181629804679}
   - component: {fileID: 7498960181629804678}
+  - component: {fileID: 2448680388299812253}
   m_Layer: 0
   m_Name: Following Enemy
   m_TagString: Untagged
@@ -29,7 +60,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -21.03, y: 3.16141, z: 0}
   m_LocalScale: {x: 20, y: 20, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 8444131723660760317}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -121,6 +153,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07b16ca9469d4f06a18784d5d24dcbc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackTarget: {fileID: 0}
+  attackTarget: {fileID: 5399984370694239953, guid: f930028450baf4393a0ebf0c163da542,
+    type: 3}
   minimumDistance: 5
   speed: 10
+--- !u!114 &2448680388299812253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7498960181629804677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9211d194cc0af9845b07468a197e20f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackTarget: {fileID: 5399984370694239953, guid: f930028450baf4393a0ebf0c163da542,
+    type: 3}
+  targetStrategy: {fileID: 4905437199228051909, guid: 2b6f1e1c792ae224da75c0f129b49a8d,
+    type: 3}
+  firePoint: {fileID: 8444131723660760317}
+  bullet: {fileID: 9137193773060478303, guid: c7bfb3562b7496a49b28a3d00675a462, type: 3}
+  seconds: 0

@@ -1,23 +1,29 @@
+using System;
 using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 [System.Serializable]
 public class BuildLevel
 {
     public int cost;
     public GameObject visualization;
-    public float damage;
     public float maxHealth;
 }
 
 public class BuildData : MonoBehaviour
 {
-    public List<BuildLevel> levels;
+    private HappyTreeGameManager gameManager;
     private BuildLevel currentLevel;
+    public List<BuildLevel> levels;
+
+
 
     void Start()
     {
+        
+        gameManager = GameObject.Find("HappyTreeGameManager").GetComponent<HappyTreeGameManager>();
+
     }
 
     void Update()

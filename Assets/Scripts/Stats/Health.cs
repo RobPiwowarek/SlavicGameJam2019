@@ -32,6 +32,15 @@ public class Health : AttackTarget
         }
     }
 
+    public float maxHealth
+    {
+        get { throw new NotImplementedException(); }
+        set
+        {
+            maxHealthPoints = value;
+        }
+    }
+
     public void Update()
     {
         if (isDead) 

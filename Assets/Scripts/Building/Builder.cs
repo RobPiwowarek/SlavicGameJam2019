@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class Builder : MonoBehaviour
 {
-    public float price;
     public GameObject buildPrefab;
     private GameObject build;
     // Start is called before the first frame update
@@ -52,7 +51,10 @@ public class Builder : MonoBehaviour
             }
             else if (CanUpgradeBuild())
             {
+                Debug.Log(build.GetComponent<BuildData>().CurrentLevel.ToString());
                 build.GetComponent<BuildData>().IncreaseLevel();
+                var levelMaxHealth = build.GetComponent<BuildData>().CurrentMaxHealth;
+                build.GetComponent<Health>().maxHealth = levelMaxHealth;
 
                 //gameManager.Money -= build.GetComponent<BuildData>().CurrentLevel.cost;
             }

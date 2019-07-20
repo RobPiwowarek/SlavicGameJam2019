@@ -13,30 +13,34 @@ public class BuildLevel
 
 public class BuildData : MonoBehaviour
 {
-
     public List<BuildLevel> levels;
     private BuildLevel currentLevel;
 
     // Use this for initialization
     void Start()
     {
-
     }
 
     // Update is called once per frame
     void Update()
     {
-
     }
 
     //1
+    public float CurrentMaxHealth
+    {
+        get
+        {
+            int currentLevelIndex = levels.IndexOf(currentLevel);
+            float levelMaxHealth = levels[currentLevelIndex].maxHealth;
+            return levelMaxHealth;
+        }
+    }
+
     public BuildLevel CurrentLevel
     {
         //2
-        get
-        {
-            return currentLevel;
-        }
+        get { return currentLevel; }
         //3
         set
         {
@@ -88,5 +92,4 @@ public class BuildData : MonoBehaviour
             CurrentLevel = levels[currentLevelIndex + 1];
         }
     }
-
 }

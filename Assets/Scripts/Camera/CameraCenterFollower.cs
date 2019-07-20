@@ -1,12 +1,15 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UIElements;
 
 public class CameraCenterFollower : MonoBehaviour
 {
     [SerializeField] private float YcameraCenterOffset;
+    [SerializeField] private float minOffset = 3.5f;
+    [SerializeField] private float maxOffset = 13.5f;
     
     public Transform player1Transform;
     public Transform player2Transform;
@@ -26,8 +29,17 @@ public class CameraCenterFollower : MonoBehaviour
     void Update()
     {
         _cameraPosition = _cameraTransform.position;
+        
         Vector3 centerPoint = (player1Transform.position + player2Transform.position) / 2;
+
+        YcameraCenterOffset = (float)Math.Round((this.GetComponent<CameraResizer>().getCameraSizePercent() * (maxOffset - minOffset)) +
+                             minOffset, 2);
+        
+        
+        //YcameraCenterOffset = (float)Math.Ceiling(centerPoint.y -this._cameraTransform.GetComponent<Camera>().ScreenToWorldPoint(UnityEngine.Vector3.zero).y);
+        //Debug.Log(centerPoint.y + " " + this._cameraTransform.GetComponent<Camera>().ScreenToWorldPoint(UnityEngine.Vector3.zero).y);
         centerPoint.y += YcameraCenterOffset;
+        
         var cameraX = _cameraPosition.x;
         var cameraY = _cameraPosition.y;
         _time += Time.deltaTime;

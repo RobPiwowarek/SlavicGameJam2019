@@ -6,8 +6,8 @@ using UnityEngine.UIElements;
 
 public class CameraResizer : MonoBehaviour
 {
-    public float minSize = 3.0f;
-    public float maxSize = 6.5f;
+    public float minSize = 5.0f;
+    public float maxSize = 15f;
     public float epsilon = 0.1f;
     public Transform player1Transform;
     public Transform player2Transform;
@@ -58,5 +58,10 @@ public class CameraResizer : MonoBehaviour
             _time += Time.deltaTime;
             _camera.orthographicSize = Mathf.SmoothStep(_camera.orthographicSize, cameraSize - epsilon, _time);
         }
+    }
+
+    public float getCameraSizePercent()
+    {
+        return (_camera.orthographicSize - minSize)/maxSize;
     }
 }

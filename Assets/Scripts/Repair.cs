@@ -14,11 +14,6 @@ public class Repair : MonoBehaviour
     {
     }
 
-    private float DistanceToMe(Vector3 other)
-    {
-        return (other - gameObject.transform.position).magnitude;
-    }
-
     private Collider2D GetClosestCollidingBuilding()
     {
         float closestDistance = float.PositiveInfinity;
@@ -26,7 +21,7 @@ public class Repair : MonoBehaviour
 
         foreach (Collider2D building in collidingBuildings)
         {
-            float distance = DistanceToMe(building.transform.position);
+            float distance = Vector3.Distance(gameObject.transform.position, building.transform.position);
             if (distance < closestDistance)
             {
                 closest = building;

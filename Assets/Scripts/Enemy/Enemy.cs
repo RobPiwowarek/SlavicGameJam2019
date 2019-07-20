@@ -21,8 +21,6 @@ public class Enemy : MonoBehaviour
 
     private void initializeBehaviors()
     {
-        if (this.targetStrategy) this.targetStrategy.playerPosition = this.transform;
-        
         if (this.attackTarget) this.movement.Init(this.attackTarget);
         if (this.attackBehaviour) this.attackBehaviour.Init(this.firePoint, this.bullet);
     }

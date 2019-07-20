@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6616144387829591280}
   - component: {fileID: 30430190431266273}
   - component: {fileID: 1027429671252272988}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Graphics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,7 +109,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5131637667579021640}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Fire Point
   m_TagString: Untagged
   m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
@@ -143,9 +143,9 @@ GameObject:
   - component: {fileID: 8961520896747619554}
   - component: {fileID: 3003157159251433458}
   - component: {fileID: 5174506714557742174}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: AvocadoBomber
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -159,7 +159,7 @@ Transform:
   m_GameObject: {fileID: 8961520896747619567}
   m_LocalRotation: {x: 0, y: 0.0625292, z: 0, w: 0.9980432}
   m_LocalPosition: {x: -0.21, y: 3.47, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 0}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0}
   m_Children:
   - {fileID: 6616144387829591280}
   - {fileID: 5131637667579021640}
@@ -213,7 +213,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.561553, y: 0.31395936}
+  m_Size: {x: 2.89, y: 2.46}
   m_EdgeRadius: 0
 --- !u!114 &3003157159251433458
 MonoBehaviour:
@@ -261,6 +261,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HoveringEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 1385941452893546409, guid: a1dc0362b09d1d54d861a4e57a7032c9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8335667422761672560, guid: a1dc0362b09d1d54d861a4e57a7032c9,
         type: 3}
@@ -348,6 +353,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BombingEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 4320732155678085434, guid: 7022f19be3bd9064db25e1e5d23b6f11,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7783124079809841643, guid: 7022f19be3bd9064db25e1e5d23b6f11,
         type: 3}

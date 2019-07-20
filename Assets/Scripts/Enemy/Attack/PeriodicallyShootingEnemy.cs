@@ -8,7 +8,7 @@ using UnityEngine;
 public class PeriodicallyShootingEnemy : ShootingEnemy
 {
 
-    [SerializeField] private float seconds;
+    [SerializeField] protected float seconds;
 
     public override void Init(Transform _firePoint, GameObject _bullet)
     {

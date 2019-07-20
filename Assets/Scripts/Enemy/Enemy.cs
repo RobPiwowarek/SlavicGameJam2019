@@ -7,7 +7,7 @@ using Object = System.Object;
 public class Enemy : MonoBehaviour
 {
 
-    [SerializeField] protected AttackTarget attackTarget;
+    [SerializeField] public AttackTarget attackTarget;
     
     [SerializeField] protected TargetSearchStrategy targetStrategy;
     [SerializeField] protected Movement movement;

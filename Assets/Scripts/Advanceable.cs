@@ -16,11 +16,16 @@ public class Advanceable : MonoBehaviour
         }
         else
         {
-            if (nextForms.Count == 0) return;
-            
-                nextForms[currentLevel - 1].AdvanceLevel();
-                ++currentLevel;
-                gameObject.SetActive(false);
+            if (nextForms.Count < currentLevel) return;
+            Advanceable nextForm = nextForms[currentLevel - 1];
+            // move Builders to nextform
+            foreach (var componentsInChild in gameObject.GetComponentsInChildren<Builder>())
+            {
+                componentsInChild.transform.parent = nextForm.transform;
+            }
+            nextForm.AdvanceLevel();
+            ++currentLevel;
+            gameObject.SetActive(false);
 
         }
     }

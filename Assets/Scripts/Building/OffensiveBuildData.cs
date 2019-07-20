@@ -56,7 +56,7 @@ public class OffensiveBuildData : MonoBehaviour
 
     private AttackTarget searchForEnemy()
     {
-        LayerMask mask = LayerMask.GetMask("Default");
+        LayerMask mask = LayerMask.GetMask("Battle");
         List<Collider2D> colliders = Physics2D.OverlapCircleAll(this.transform.position, searchRadius, mask)
             .Where(o => o.CompareTag("Enemy"))
             .OrderBy(o => (o.transform.position - this.transform.position).sqrMagnitude)

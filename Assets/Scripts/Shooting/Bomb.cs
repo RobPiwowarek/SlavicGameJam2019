@@ -11,7 +11,7 @@ public class Bomb : Bullet
     [SerializeField] private float damageModifier;
     protected override void applyDamage(Collision2D other)
     {
-        LayerMask mask = LayerMask.GetMask("Default");
+        LayerMask mask = LayerMask.GetMask("Battle");
         List<Collider2D> hitColliders = Physics2D.OverlapCircleAll(other.transform.position, splashRadius, mask).ToList();
         
         hitColliders.ForEach(c => c.GetComponent<AttackTarget>()?.ReceiveDamage((int)(damageModifier * damage)));

@@ -127,11 +127,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 69351382496963899, guid: 550d8930c4b88f84294fb9e47e9b2566,
-        type: 3}
-      propertyPath: m_Name
-      value: kaczka
-      objectReference: {fileID: 0}
     - target: {fileID: 69351382496963888, guid: 550d8930c4b88f84294fb9e47e9b2566,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -186,6 +181,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 69351382496963899, guid: 550d8930c4b88f84294fb9e47e9b2566,
+        type: 3}
+      propertyPath: m_Name
+      value: kaczka
+      objectReference: {fileID: 0}
+    - target: {fileID: 69351382496963892, guid: 550d8930c4b88f84294fb9e47e9b2566,
+        type: 3}
+      propertyPath: ladderMoveCode
+      value: Vertical
       objectReference: {fileID: 0}
     - target: {fileID: 69351382496963889, guid: 550d8930c4b88f84294fb9e47e9b2566,
         type: 3}
@@ -354,11 +359,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 69351382496963899, guid: 550d8930c4b88f84294fb9e47e9b2566,
-        type: 3}
-      propertyPath: m_Name
-      value: kaczka 2
-      objectReference: {fileID: 0}
     - target: {fileID: 69351382496963888, guid: 550d8930c4b88f84294fb9e47e9b2566,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -414,10 +414,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 69351382496963889, guid: 550d8930c4b88f84294fb9e47e9b2566,
+    - target: {fileID: 69351382496963899, guid: 550d8930c4b88f84294fb9e47e9b2566,
         type: 3}
-      propertyPath: fireCode
-      value: Fire1_Joystick
+      propertyPath: m_Name
+      value: kaczka 2
       objectReference: {fileID: 0}
     - target: {fileID: 69351382496963892, guid: 550d8930c4b88f84294fb9e47e9b2566,
         type: 3}
@@ -428,6 +428,16 @@ PrefabInstance:
         type: 3}
       propertyPath: jumpCode
       value: Jump_Joystick
+      objectReference: {fileID: 0}
+    - target: {fileID: 69351382496963892, guid: 550d8930c4b88f84294fb9e47e9b2566,
+        type: 3}
+      propertyPath: ladderMoveCode
+      value: Vertical_Joystick
+      objectReference: {fileID: 0}
+    - target: {fileID: 69351382496963889, guid: 550d8930c4b88f84294fb9e47e9b2566,
+        type: 3}
+      propertyPath: fireCode
+      value: Fire1_Joystick
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 550d8930c4b88f84294fb9e47e9b2566, type: 3}

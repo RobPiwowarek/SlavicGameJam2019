@@ -109,6 +109,7 @@ MonoBehaviour:
   m_GroundCheck: {fileID: 69351384241751787}
   m_CeilingCheck: {fileID: 69351382941726966}
   m_CrouchDisableCollider: {fileID: 0}
+  onLadder: 0
   OnLandEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -133,6 +134,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 69351382496963893}
   runSpeed: 40
+  moveCode: Horizontal
+  jumpCode: Jump
 --- !u!114 &69351382496963889
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,8 +148,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 965df19008b035b44addc34decba431b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 5
   line: {fileID: 69351383456348133}
   firePoint: {fileID: 69351384350362161}
+  shake: {fileID: 0}
+  shakeDuration: 0.25
+  fireCode: 
 --- !u!114 &6126741538456370726
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,12 +1,12 @@
 using System;
 using UnityEngine;
 
-public class ShootingEnemy: Enemy
+// ATTENTION: AN ATTACK BEHAVIOUR MUST BE A CHILD OF ENEMY OBJECT ON THE SCENE
+
+public class ShootingEnemy: AttackBehaviour
 {
-    [SerializeField] private Transform firePoint;
-    public GameObject bullet;
     protected Boolean fire = false;
-    protected override void TriggerAttack()
+    public override void TriggerAttack()
     {
         if (Input.GetButtonDown("Fire1"))
         {
@@ -14,7 +14,7 @@ public class ShootingEnemy: Enemy
         }
     }
 
-    protected override void Attack()
+    public override void Attack()
     {
         if (fire)
         {

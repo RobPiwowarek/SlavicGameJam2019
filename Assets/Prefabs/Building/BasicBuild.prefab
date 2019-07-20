@@ -13,6 +13,9 @@ GameObject:
   - component: {fileID: 4891132052783914629}
   - component: {fileID: 376191473556645626}
   - component: {fileID: 6410955893583974771}
+  - component: {fileID: -4003292513805589376}
+  - component: {fileID: 3659777705685651563}
+  - component: {fileID: 2994461584889378562}
   m_Layer: 0
   m_Name: BasicBuild
   m_TagString: Untagged
@@ -143,3 +146,58 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deb17be9a7a3403b91c41ae15d68f7d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-4003292513805589376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5760491743015850022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c47e608c6408c9409e974bb372d8a35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthPoints: 50
+  maxHealthPoints: 50
+--- !u!114 &3659777705685651563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5760491743015850022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3641518d68bf34cf6924893f9905a504, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 0}
+--- !u!114 &2994461584889378562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5760491743015850022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a877ac8fca91425ebd08f573ef30b1b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levels:
+  - cost: 0
+    visualization: {fileID: 5923587950578303723, guid: d9885a8264fe94eea8cb9050c10fff7a,
+      type: 3}
+    damage: 0
+    maxHealth: 0
+  - cost: 0
+    visualization: {fileID: 7971467588718232296, guid: 391cb3b6e2d454eac97806f56701b5a2,
+      type: 3}
+    damage: 0
+    maxHealth: 0
+  - cost: 0
+    visualization: {fileID: 7840450929433520702, guid: a980e2129cadb4aa7ad92cd6a1371377,
+      type: 3}
+    damage: 0
+    maxHealth: 0

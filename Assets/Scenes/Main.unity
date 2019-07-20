@@ -748,10 +748,20 @@ PrefabInstance:
       propertyPath: jumpCode
       value: Jump_Joystick
       objectReference: {fileID: 0}
+    - target: {fileID: 69351382496963892, guid: 550d8930c4b88f84294fb9e47e9b2566,
+        type: 3}
+      propertyPath: ladderMoveCode
+      value: Vertical_Joystick
+      objectReference: {fileID: 0}
     - target: {fileID: 69351382496963889, guid: 550d8930c4b88f84294fb9e47e9b2566,
         type: 3}
       propertyPath: fireCode
       value: Fire1_Joystick
+      objectReference: {fileID: 0}
+    - target: {fileID: 29185942621737176, guid: 550d8930c4b88f84294fb9e47e9b2566,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 550d8930c4b88f84294fb9e47e9b2566, type: 3}

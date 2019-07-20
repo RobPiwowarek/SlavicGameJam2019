@@ -260,15 +260,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levels:
-  - cost: 0
+  - cost: 500
     visualization: {fileID: 8512428554454566157}
     damage: 0
     maxHealth: 50
-  - cost: 0
+  - cost: 500
     visualization: {fileID: 813347276051867410}
     damage: 0
     maxHealth: 100
-  - cost: 0
+  - cost: 1000
     visualization: {fileID: 678337254159442592}
     damage: 0
     maxHealth: 150

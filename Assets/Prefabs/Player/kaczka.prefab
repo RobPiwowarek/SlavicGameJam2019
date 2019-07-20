@@ -103,7 +103,7 @@ MonoBehaviour:
   m_JumpForce: 200
   m_CrouchSpeed: 0.36
   m_MovementSmoothing: 0.05
-  m_AirControl: 0
+  m_AirControl: 1
   m_WhatIsGround:
     serializedVersion: 2
     m_Bits: 768
@@ -137,6 +137,7 @@ MonoBehaviour:
   runSpeed: 40
   moveCode: Horizontal
   jumpCode: Jump
+  ladderMoveCode: 
 --- !u!114 &69351382496963889
 MonoBehaviour:
   m_ObjectHideFlags: 0

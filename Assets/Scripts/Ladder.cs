@@ -18,7 +18,7 @@ public class Ladder : MonoBehaviour
 
         if (rb)
         {
-            rb.gravityScale = 1f;
+            rb.gravityScale = 0f;
         }
     }
 
@@ -34,7 +34,8 @@ public class Ladder : MonoBehaviour
 
         if (rb)
         {
-            rb.gravityScale = 0f;
+            rb.gravityScale = 1f;
+            rb.velocity = new Vector3(rb.velocity.x, 0, 0);
         }
     }
 }

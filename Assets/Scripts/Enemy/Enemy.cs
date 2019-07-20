@@ -7,7 +7,7 @@ using Object = System.Object;
 public class Enemy : MonoBehaviour
 {
 
-    [SerializeField] public AttackTarget attackTarget;
+    public AttackTarget attackTarget;
     
     [SerializeField] protected TargetSearchStrategy targetStrategy;
     [SerializeField] protected Movement movement;
@@ -16,8 +16,8 @@ public class Enemy : MonoBehaviour
     [SerializeField] protected Transform firePoint;
     [SerializeField] protected GameObject bullet;
 
-    [SerializeField] public bool flipped = false;
-    [SerializeField] public bool idle = false;
+    public bool flipped = false;
+    public bool idle = false;
 
     private void initializeBehaviors()
     {

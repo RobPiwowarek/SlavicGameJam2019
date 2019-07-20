@@ -27,7 +27,6 @@ public class HoveringEnemy: Movement
     {
         if (attackTarget)
         {
-            if (this.enemy) this.enemy.idle = false;
             
             scanRightPosition = new Vector2(current.x + scanDistance, current.y);
             scanLeftPosition = new Vector2(current.x - scanDistance, current.y);
@@ -57,16 +56,12 @@ public class HoveringEnemy: Movement
 
                 return result;
             }
-            
-            return new Vector2(current.x, current.y + Amplitude * Mathf.Sin(speed * Time.fixedTime));
         }
-        else
-        {
-            enemy.idle = true;
-        }
+        
+        return new Vector2(current.x, current.y + Amplitude * Mathf.Sin(speed * Time.fixedTime));
 
 
-        if (goRight && enemy)
+        /*if (goRight && enemy)
         {
             if ((current - scanRightPosition).sqrMagnitude < distanceBuffer)
             {
@@ -85,7 +80,7 @@ public class HoveringEnemy: Movement
             }
             return Vector2.MoveTowards(current, scanLeftPosition,
                 speed * Time.fixedDeltaTime);
-        }
+        }*/
 
         return current;
 

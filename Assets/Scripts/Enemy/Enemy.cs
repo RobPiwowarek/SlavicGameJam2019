@@ -2,18 +2,31 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Object = System.Object;
 
-public abstract class Enemy : MonoBehaviour
+public class Enemy : MonoBehaviour
 {
 
     [SerializeField] protected AttackTarget attackTarget;
+    
     [SerializeField] protected TargetSearchStrategy targetStrategy;
-    private MovingEnemy movement;
+    [SerializeField] protected Movement movement;
+    [SerializeField] protected AttackBehaviour attackBehaviour;
+    
+    [SerializeField] protected Transform firePoint;
+    [SerializeField] protected GameObject bullet;
 
-    private void Awake()
+    private void initializeBehaviors()
     {
         if (this.targetStrategy) this.targetStrategy.playerPosition = this.transform;
-        this.movement = this.GetComponent<MovingEnemy>();
+        
+        if (this.attackTarget) this.movement.Init(this.attackTarget);
+        if (this.attackBehaviour) this.attackBehaviour.Init(this.firePoint, this.bullet);
+    }
+    
+    private void Start()
+    {
+        this.initializeBehaviors();
     }
 
     void Update()
@@ -24,22 +37,19 @@ public abstract class Enemy : MonoBehaviour
             if (newAttackTarget)
             {
                 this.attackTarget = newAttackTarget;
-                if (this.movement) movement.attackTarget = this.attackTarget;
+                if (this.movement) this.movement.Init(this.attackTarget);
             }
         }
-        this.TriggerAttack();
+        if (this.attackBehaviour) this.attackBehaviour.TriggerAttack();
     }
 
     void FixedUpdate()
     {
-        if (this.movement) this.movement.Move();
-        Attack();
-    }
-
-    protected abstract void TriggerAttack();
-
-    protected virtual void Attack()
-    {
+        if (this.movement)
+        {
+            this.transform.position = this.movement.Move(this.transform.position);
+        }
+        if (this.attackBehaviour) this.attackBehaviour.Attack();
     }
 
 }

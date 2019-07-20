@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 8507244022281239976}
   - component: {fileID: 1749715962668774608}
   - component: {fileID: 4962594324209911344}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Bomb
-  m_TagString: Untagged
+  m_TagString: Missile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -51,6 +51,8 @@ MonoBehaviour:
   damage: 25
   splashRadius: 100
   damageModifier: 0.5
+  explosion: {fileID: 7528148433907772120, guid: d4c9e688f9500f149aaa527f83303066,
+    type: 3}
 --- !u!50 &8507244022281239976
 Rigidbody2D:
   serializedVersion: 4

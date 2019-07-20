@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4252604373688352599}
   - component: {fileID: 9131137614230344310}
+  - component: {fileID: 933727359}
   m_Layer: 10
   m_Name: ShootingPear
   m_TagString: Building
@@ -59,6 +60,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.538929, y: 0.910347}
   m_EdgeRadius: 0
+--- !u!114 &933727359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4252604373688352592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c47e608c6408c9409e974bb372d8a35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthPoints: 1000
+  maxHealthPoints: 1000
 --- !u!1 &4252604374085055243
 GameObject:
   m_ObjectHideFlags: 0

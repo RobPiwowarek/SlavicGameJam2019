@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class Builder : MonoBehaviour
 {
-    public GameObject buildPrefab;
+    public GameObject buildPrefab; // hack
+    public BuildingSelection buildingSelection;
     private GameObject build;
 
     private HappyTreeGameManager gameManager;
@@ -63,5 +64,17 @@ public class Builder : MonoBehaviour
                 gameManager.Money -= build.GetComponent<BuildData>().CurrentLevel.cost;
             }
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        // todo check player????
+        buildingSelection.gameObject.SetActive(true);
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        // todo check player???
+        buildingSelection.gameObject.SetActive(false);
     }
 }

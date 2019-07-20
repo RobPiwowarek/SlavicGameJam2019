@@ -32,9 +32,13 @@ public class GetOneClosestStrategy : TargetSearchStrategy
 
     private void RescanAttackTargets()
     {
-        this.attackTargets = FindObjectsOfType<AttackTarget>()
-            .Where(t => t.transform.position != playerPosition.position && t.CompareTag("Building"))
-            .OrderBy(t => (t.transform.position - playerPosition.position).sqrMagnitude)
+        LayerMask mask = LayerMask.GetMask("Battle");
+        
+        this.attackTargets = Physics2D.OverlapCircleAll(this.transform.position, 100.0f, mask)
+            .Where(o => o.CompareTag("Building") && o.GetComponent<AttackTarget>())
+            .Select(o => o.GetComponent<AttackTarget>())
+            .OrderBy(o => (o.transform.position - this.transform.position).sqrMagnitude)
             .ToList();
+        
     }
 }

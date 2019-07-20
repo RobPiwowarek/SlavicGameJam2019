@@ -17,7 +17,7 @@ public class CharacterController2D : MonoBehaviour
     private float m_MovementSmoothing = .05f;  
     [SerializeField]
     // Whether or not a player can steer while jumping;
-    private bool m_AirControl = true;                         
+    private bool m_AirControl = false;                         
     [SerializeField]
     // A mask determining what is ground to the character
     private LayerMask m_WhatIsGround;                           

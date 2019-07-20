@@ -40,7 +40,6 @@ GameObject:
   m_Component:
   - component: {fileID: 607868206001488175}
   - component: {fileID: 607868206001488160}
-  - component: {fileID: 2451355197197097344}
   - component: {fileID: 172997062}
   - component: {fileID: -6989819073429648054}
   m_Layer: 8
@@ -115,20 +114,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2451355197197097344
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 607868206001488162}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c47e608c6408c9409e974bb372d8a35, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthPoints: 50
-  maxHealthPoints: 50
 --- !u!68 &172997062
 EdgeCollider2D:
   m_ObjectHideFlags: 0

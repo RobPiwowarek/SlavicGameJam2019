@@ -27,6 +27,10 @@ public class BuildingSelection : MonoBehaviour
 
     void update()
     {
+        if (prefabs.Count <= 0)
+        {
+            return;
+        }
         gameObject.GetComponent<SpriteRenderer>().sprite = selectedIcon();
         gameObject.GetComponentInParent<Builder>().buildPrefab = selectedPrefab();
     }

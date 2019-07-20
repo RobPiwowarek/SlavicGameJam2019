@@ -16,6 +16,16 @@ public class PlayerMovement : MonoBehaviour
     float verticalMove = 0f;
     bool jump = false;
 
+    public bool isMoving()
+    {
+        return Math.Abs(horizontalMove) > 0f || Math.Abs(verticalMove) > 0f;
+    }
+
+    public bool isJumping()
+    {
+        return jump;
+    }
+
     // Start is called before the first frame update
     void Start()
     {

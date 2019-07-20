@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class HappyTreeGameManager : MonoBehaviour
 {
-    public Tree tree;
+    public HappyTree tree;
     public Health treeHealth;
     
     public Text moneyLabel;

@@ -9,6 +9,8 @@ public class Bullet : MonoBehaviour
     public Rigidbody2D rigidbody;
     public float damage = 20f;
 
+    public bool monetize = false;
+    
     private void Start()
     {
         rigidbody.velocity = transform.right * speed;
@@ -27,6 +29,8 @@ public class Bullet : MonoBehaviour
         AttackTarget enemy = other.collider.GetComponent<AttackTarget>();
         
         enemy?.ReceiveDamage((int)this.damage);
-        
+
+        if (monetize) FindObjectOfType<HappyTreeGameManager>().Money += 100f;
+
     }
 }

@@ -150,7 +150,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 20
   rigidbody: {fileID: 3767720467694132918}
-  damage: 25
+  damage: 22
+  monetize: 1
 --- !u!58 &876454571
 CircleCollider2D:
   m_ObjectHideFlags: 0

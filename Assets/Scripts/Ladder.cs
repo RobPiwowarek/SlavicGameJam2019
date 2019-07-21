@@ -8,6 +8,11 @@ public class Ladder : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if (!other.CompareTag("Player"))
+        {
+            return;
+        }
+        
         CharacterController2D cc = other.transform.GetComponent<CharacterController2D>();
         if (cc)
         {
@@ -21,7 +26,7 @@ public class Ladder : MonoBehaviour
             rb.gravityScale = 0f;
         }
         
-        BoxCollider2D coll = other.transform.GetComponent<BoxCollider2D>();
+        Collider2D coll = other.transform.GetComponent<Collider2D>();
 
         if (coll)
         {
@@ -31,6 +36,11 @@ public class Ladder : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
+        if (!other.CompareTag("Player"))
+        {
+            return;
+        }
+        
         CharacterController2D cc = other.transform.GetComponent<CharacterController2D>();
         if (cc)
         {
@@ -45,7 +55,7 @@ public class Ladder : MonoBehaviour
             rb.velocity = new Vector3(rb.velocity.x, 0, 0);
         }
         
-        BoxCollider2D coll = other.transform.GetComponent<BoxCollider2D>();
+        Collider2D coll = other.transform.GetComponent<Collider2D>();
 
         if (coll)
         {

@@ -15,10 +15,10 @@ public class CameraResizer : MonoBehaviour
     private Camera _camera;
     private float _time = 0;
     
-    private const float EpsilonExpandX = 4f;
-    private const float EpsilonCollapseX = 6f;
-    private const float EpsilonExpandY = 2f;
-    private const float EpsilonCollapseY = 4f;
+    private const float EpsilonExpandX = 8f;
+    private const float EpsilonCollapseX = 10f;
+    private const float EpsilonExpandY = 6f;
+    private const float EpsilonCollapseY = 8f;
 
     // Start is called before the first frame update
     void Start()
@@ -60,8 +60,8 @@ public class CameraResizer : MonoBehaviour
         }
     }
 
-    public float getCameraSizePercent()
+    public float getCameraSizeChange()
     {
-        return (_camera.orthographicSize - minSize)/maxSize;
+        return _camera.orthographicSize - minSize;
     }
 }

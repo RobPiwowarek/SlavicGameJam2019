@@ -6,6 +6,8 @@ public class Spawn : MonoBehaviour
 {
     //Array of objects to spawn (note I've removed the private goods variable)
     public GameObject[] theGoodies;
+
+    public GameObject particle;
   
     //Time it takes to spawn theGoodies
     [Space(3)]
@@ -44,7 +46,8 @@ public class Spawn : MonoBehaviour
 
         // Creates the random object at the random 2D position.
         Instantiate (goodsPrefab, pos, Quaternion.identity);
- 
+        Instantiate(particle, pos, Quaternion.identity);
+
         // If I wanted to get the result of instantiate and fiddle with it, I might do this instead:
         //GameObject newGoods = (GameObject)Instantiate(goodsPrefab, pos)
         //newgoods.something = somethingelse;

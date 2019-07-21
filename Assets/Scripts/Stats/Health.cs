@@ -8,6 +8,13 @@ public class Health : AttackTarget
     public float healthPoints = 50;
     public float maxHealthPoints = 50;
     private Boolean isDead;
+    private HappyTreeGameManager gm;
+
+    public void Start()
+    {
+        gm = GameObject.Find("HappyTreeGameManager").GetComponent<HappyTreeGameManager>();
+    }
+
 
     public override void ReceiveDamage(int dmg)
     {
@@ -16,8 +23,12 @@ public class Health : AttackTarget
 
     public void takeDamage(float damage)
     {
-        healthPoints -= damage;
 
+        if (this.gameObject.CompareTag("Building") || this.gameObject.CompareTag("Hearth"))
+            healthPoints -= damage * gm.damageReductionModifier;
+        else
+            healthPoints -= damage;
+        
         if (healthPoints < 0)
             isDead = true;
     }

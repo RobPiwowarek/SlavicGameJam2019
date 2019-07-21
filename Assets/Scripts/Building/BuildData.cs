@@ -9,6 +9,7 @@ public class BuildLevel
     public int cost;
     public GameObject visualization;
     public float maxHealth;
+    
 }
 
 public class BuildData : MonoBehaviour
@@ -16,9 +17,7 @@ public class BuildData : MonoBehaviour
     private HappyTreeGameManager gameManager;
     private BuildLevel currentLevel;
     public List<BuildLevel> levels;
-
-
-
+    
     void Start()
     {
         

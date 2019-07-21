@@ -55,7 +55,7 @@ public class Builder : MonoBehaviour
         {
             build = (GameObject) Instantiate(buildPrefab, transform.position, Quaternion.identity);
             build.transform.parent = gameObject.transform;
-            gameManager.Money -= build.GetComponent<BuildData>().CurrentLevel.cost;
+            gameManager.Money -= build.GetComponent<BuildData>().CurrentLevel.cost * gameManager.buildingSpeedModifier;
             buildingSelection.gameObject.SetActive(false);
         }
         else if (CanUpgradeBuild())

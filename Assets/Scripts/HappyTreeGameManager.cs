@@ -41,7 +41,6 @@ public class HappyTreeGameManager : MonoBehaviour
             //moneyLabel.GetComponent<Text>().text = "Money: " + money;
         }
     }
-
     public void Update()
     {
         GameObject heart = GameObject.FindWithTag("Hearth");
@@ -49,7 +48,6 @@ public class HappyTreeGameManager : MonoBehaviour
         {
             Time.timeScale = 0.0f;
             GameObject.Find("END").gameObject.SetActiveRecursively(true);
-            //  gameObject.GetChild("childname").SetActive(false);
         }
     }
 

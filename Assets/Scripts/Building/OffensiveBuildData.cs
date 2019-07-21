@@ -12,10 +12,19 @@ public class OffensiveBuildData : MonoBehaviour
     [SerializeField] private AttackTarget attackTarget;
     [SerializeField] private float searchRadius;
     [SerializeField] private bool flipped;
+    [SerializeField] private float damage = 20f;
+
 
     private bool facedRight;
     void Start()
     {
+        Bullet bc = bullet.GetComponentInChildren<Bullet>();
+
+        if (bc)
+        {
+            bc.damage = damage * GameObject.Find("HappyTreeGameManager").GetComponent<HappyTreeGameManager>().towerDamageModifier;
+        }
+        
         StartCoroutine(CheckIfTimePassed());
         facedRight = firePoint.position.x > this.transform.position.x;
     }

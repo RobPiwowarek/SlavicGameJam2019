@@ -32,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 69351382496963899}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 1}
   m_Children:
   - {fileID: 69351383456348134}
   - {fileID: 2676738268583835578}
@@ -75,7 +75,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 055bd7e259eaf9e43ba88512fd03f085, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_JumpForce: 400
+  m_JumpForce: 575
   m_CrouchSpeed: 0.36
   m_MovementSmoothing: 0.05
   m_AirControl: 1
@@ -110,9 +110,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 69351382496963893}
   runSpeed: 40
-  moveCode: Horizontal
-  jumpCode: Jump
-  ladderMoveCode: Vertical
+  moveCode: Horizontal_Joystick
+  jumpCode: Jump_Joystick
+  ladderMoveCode: Vertical_Joystick
 --- !u!114 &69351382496963889
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -130,7 +130,7 @@ MonoBehaviour:
   firePoint: {fileID: 69351384350362161}
   shake: {fileID: 0}
   shakeDuration: 0.25
-  fireCode: Fire1
+  fireCode: Fire1_Joystick
 --- !u!114 &6126741538456370726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -434,8 +434,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 853528327
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: ccd7c71c21c4d8f408bb35f7a018ab12, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -491,7 +491,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 69351384241751786}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.758, z: 0}
+  m_LocalPosition: {x: 0, y: -0.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 570147030213663986}
@@ -660,8 +660,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 853528327
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 7ee358ac4fa7aa642a17f667123b0f34, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -710,7 +710,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &443230263727357809
 Transform:
   m_ObjectHideFlags: 0
@@ -795,11 +795,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 69351382496963888}
     m_Modifications:
-    - target: {fileID: 7170544848248413993, guid: eff0a954a92678649a00808fbe344579,
-        type: 3}
-      propertyPath: m_Name
-      value: RepairRange
-      objectReference: {fileID: 0}
     - target: {fileID: 7170544848248413992, guid: eff0a954a92678649a00808fbe344579,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -854,6 +849,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170544848248413993, guid: eff0a954a92678649a00808fbe344579,
+        type: 3}
+      propertyPath: m_Name
+      value: RepairRange
       objectReference: {fileID: 0}
     - target: {fileID: 7170544848248413999, guid: eff0a954a92678649a00808fbe344579,
         type: 3}

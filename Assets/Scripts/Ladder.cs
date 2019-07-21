@@ -51,7 +51,7 @@ public class Ladder : MonoBehaviour
 
         if (rb)
         {
-            rb.gravityScale = 1f;
+            rb.gravityScale = 3f;
             rb.velocity = new Vector3(rb.velocity.x, 0, 0);
         }
         

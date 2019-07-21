@@ -48,8 +48,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0
   rigidbody: {fileID: 8507244022281239976}
-  damage: 25
-  splashRadius: 100
+  damage: 10
+  splashRadius: 10
   damageModifier: 0.5
   explosion: {fileID: 7528148433907772120, guid: d4c9e688f9500f149aaa527f83303066,
     type: 3}
@@ -111,7 +111,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 853528327
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

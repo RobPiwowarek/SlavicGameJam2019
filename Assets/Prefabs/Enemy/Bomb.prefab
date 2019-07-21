@@ -48,8 +48,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0
   rigidbody: {fileID: 8507244022281239976}
-  damage: 25
-  splashRadius: 100
+  damage: 10
+  splashRadius: 10
   damageModifier: 0.5
   explosion: {fileID: 7528148433907772120, guid: d4c9e688f9500f149aaa527f83303066,
     type: 3}

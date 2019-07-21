@@ -51,11 +51,11 @@ public class HappyTreeGameManager : MonoBehaviour
         }
     }
 
-    private float buildingSpeedModifier = 1.0f;
-    private float towerDamageModifier = 1.0f;
-    private float damageReductionModifier = 1.0f;
-    private float attackSpeedModifier = 1.0f;
-    private float maxHealthModifier = 1.0f;
+    public float buildingSpeedModifier = 1.0f;
+    public float towerDamageModifier = 1.0f;
+    public float damageReductionModifier = 1.0f;
+    public float attackSpeedModifier = 1.0f;
+    public float maxHealthModifier = 1.0f;
 
     public void UpgradeBuildingSpeed()
     {

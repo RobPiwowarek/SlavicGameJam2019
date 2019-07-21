@@ -41,7 +41,16 @@ public class HappyTreeGameManager : MonoBehaviour
             //moneyLabel.GetComponent<Text>().text = "Money: " + money;
         }
     }
-    
+    public void Update()
+    {
+        GameObject heart = GameObject.FindWithTag("Hearth");
+        if (!heart)
+        {
+            Time.timeScale = 0.0f;
+            GameObject.Find("END").gameObject.SetActiveRecursively(true);
+        }
+    }
+
     private float buildingSpeedModifier = 1.0f;
     private float towerDamageModifier = 1.0f;
     private float damageReductionModifier = 1.0f;

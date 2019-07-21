@@ -9,6 +9,12 @@ public class PeriodicallyShootingEnemy : ShootingEnemy
 {
 
     [SerializeField] protected float seconds;
+    private HappyTreeGameManager gm;
+
+    public void Start()
+    {
+        gm = GameObject.Find("HappyTreeGameManager").GetComponent<HappyTreeGameManager>();
+    }
 
     public override void Init(Transform _firePoint, GameObject _bullet)
     {
@@ -21,7 +27,10 @@ public class PeriodicallyShootingEnemy : ShootingEnemy
         {
             fire = true;
             Attack();
-            yield return new WaitForSeconds(seconds);
+            if (this.gameObject.CompareTag("Building"))
+                yield return new WaitForSeconds(seconds * gm.attackSpeedModifier);
+            else
+                yield return new WaitForSeconds(seconds);
         }
     }
     

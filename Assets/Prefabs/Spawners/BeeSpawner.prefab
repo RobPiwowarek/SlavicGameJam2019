@@ -45,7 +45,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   theGoodies:
   - {fileID: 7041858792086138407, guid: 971ba0c382573f34496530f60f4fcd3a, type: 3}
-  waitingForNextSpawn: 5
+  waitingForNextSpawn: 10
   theCountdown: 10
   xMin: -25
   xMax: -17

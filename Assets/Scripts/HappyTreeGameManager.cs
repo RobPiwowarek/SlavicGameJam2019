@@ -13,6 +13,17 @@ public class HappyTreeGameManager : MonoBehaviour
 
     private float money;
 
+    public void Awake()
+    {
+        Time.timeScale = 0.0f;
+    }
+
+    public void StartTheGame()
+    {
+        Time.timeScale = 1f;
+        GameObject.Find("MENU").SetActive(false);
+    }
+
     public void Start()
     {
         Money = 1000;

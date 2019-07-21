@@ -155,8 +155,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c47e608c6408c9409e974bb372d8a35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthPoints: 1000
-  maxHealthPoints: 1000
+  healthPoints: 500
+  maxHealthPoints: 500
 --- !u!114 &292918047100656865
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -170,7 +170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levels:
-  - cost: 0
+  - cost: 150
     visualization: {fileID: 8078211527580317846}
     maxHealth: 100
 --- !u!61 &762749119

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 [System.Serializable]
 public class BuildLevel
 {
-    public int cost;
+    public int cost = 150;
     public GameObject visualization;
     public float maxHealth;
     

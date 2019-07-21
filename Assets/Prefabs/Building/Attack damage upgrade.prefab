@@ -158,7 +158,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levels:
-  - cost: 0
+  - cost: 100
     visualization: {fileID: 3522604904071995576}
     maxHealth: 100
 --- !u!114 &8051836748877760581

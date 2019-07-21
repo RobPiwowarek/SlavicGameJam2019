@@ -46,7 +46,11 @@ public class HappyTreeGameManager : MonoBehaviour
     public void Update()
     {
         GameObject heart = GameObject.FindWithTag("Hearth");
+        
         if (moneyLabel) moneyLabel.text = "Money: " + money;
+        
+        Debug.Log(money);
+        
         if (!heart)
         {
             Time.timeScale = 0.0f;

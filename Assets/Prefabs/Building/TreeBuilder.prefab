@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildingSelection: {fileID: 0}
-  upgradeCost: 0
+  upgradeCost: 150
 --- !u!61 &5233973279628744349
 BoxCollider2D:
   m_ObjectHideFlags: 0

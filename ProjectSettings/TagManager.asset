@@ -47,4 +47,6 @@ TagManager:
     locked: 0
   - name: Character
     uniqueID: 853528327
+  - name: BuildingSelector
+    uniqueID: 2607444851
     locked: 0

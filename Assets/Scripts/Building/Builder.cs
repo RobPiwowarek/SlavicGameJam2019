@@ -8,6 +8,7 @@ public class Builder : MonoBehaviour
     public GameObject buildPrefab; // hack
     public BuildingSelection buildingSelection;
     private GameObject build;
+    private bool playerInRange;
 
     private HappyTreeGameManager gameManager;
 
@@ -20,6 +21,10 @@ public class Builder : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetButtonDown("ActionButton") && playerInRange)
+        {
+            Build();
+        }
     }
 
     private bool CanPlaceBuild()
@@ -43,27 +48,25 @@ public class Builder : MonoBehaviour
         return false;
     }
 
-    private void OnTriggerStay2D(Collider2D other)
+    private void Build()
     {
-        if (Input.GetButtonDown("ActionButton"))
+        
+        if (CanPlaceBuild())
         {
-            if (CanPlaceBuild())
-            {
-                build = (GameObject) Instantiate(buildPrefab, transform.position, Quaternion.identity);
-                build.transform.parent = gameObject.transform;
-                gameManager.Money -= build.GetComponent<BuildData>().CurrentLevel.cost;
-                buildingSelection.gameObject.SetActive(false);
-            }
-            else if (CanUpgradeBuild())
-            {
-                var currentMaxHealth = build.GetComponent<BuildData>().CurrentMaxHealth;
-                var currentHealth = build.GetComponent<Health>().healthPoints;
-                build.GetComponent<BuildData>().IncreaseLevel();
-                var levelMaxHealth = build.GetComponent<BuildData>().CurrentMaxHealth;
-                build.GetComponent<Health>().maxHealth = levelMaxHealth;
-                build.GetComponent<Health>().restoreHealth(levelMaxHealth - currentMaxHealth);
-                gameManager.Money -= build.GetComponent<BuildData>().CurrentLevel.cost;
-            }
+            build = (GameObject) Instantiate(buildPrefab, transform.position, Quaternion.identity);
+            build.transform.parent = gameObject.transform;
+            gameManager.Money -= build.GetComponent<BuildData>().CurrentLevel.cost;
+            buildingSelection.gameObject.SetActive(false);
+        }
+        else if (CanUpgradeBuild())
+        {
+            var currentMaxHealth = build.GetComponent<BuildData>().CurrentMaxHealth;
+            var currentHealth = build.GetComponent<Health>().healthPoints;
+            build.GetComponent<BuildData>().IncreaseLevel();
+            var levelMaxHealth = build.GetComponent<BuildData>().CurrentMaxHealth;
+            build.GetComponent<Health>().maxHealth = levelMaxHealth;
+            build.GetComponent<Health>().restoreHealth(levelMaxHealth - currentMaxHealth);
+            gameManager.Money -= build.GetComponent<BuildData>().CurrentLevel.cost;
         }
     }
 
@@ -79,6 +82,7 @@ public class Builder : MonoBehaviour
             return;
         }
         buildingSelection.gameObject.SetActive(true);
+        playerInRange = true;
 
     }
 
@@ -89,5 +93,6 @@ public class Builder : MonoBehaviour
             return;
         }
         buildingSelection.gameObject.SetActive(false);
+        playerInRange = false;
     }
 }

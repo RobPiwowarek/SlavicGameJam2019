@@ -184,16 +184,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4435285565629083713}
     m_Modifications:
-    - target: {fileID: 2216617517299070829, guid: 737dcebb0750cce4180e355397b3c9f8,
-        type: 3}
-      propertyPath: m_Name
-      value: BuildingSelection
-      objectReference: {fileID: 0}
-    - target: {fileID: 2216617517299070829, guid: 737dcebb0750cce4180e355397b3c9f8,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3878694890287470959, guid: 737dcebb0750cce4180e355397b3c9f8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -264,15 +254,25 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2216617517299070829, guid: 737dcebb0750cce4180e355397b3c9f8,
+        type: 3}
+      propertyPath: m_Name
+      value: BuildingSelection
+      objectReference: {fileID: 0}
+    - target: {fileID: 2216617517299070829, guid: 737dcebb0750cce4180e355397b3c9f8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6908571583740437210, guid: 737dcebb0750cce4180e355397b3c9f8,
         type: 3}
       propertyPath: prefabs.Array.size
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6908571583740437210, guid: 737dcebb0750cce4180e355397b3c9f8,
         type: 3}
       propertyPath: prefabIcons.Array.size
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6908571583740437210, guid: 737dcebb0750cce4180e355397b3c9f8,
         type: 3}
@@ -321,6 +321,30 @@ PrefabInstance:
       propertyPath: prefabIcons.Array.data[3]
       value: 
       objectReference: {fileID: 21300000, guid: cfa5239a8c1b1c940b2a854df99d2299,
+        type: 3}
+    - target: {fileID: 6908571583740437210, guid: 737dcebb0750cce4180e355397b3c9f8,
+        type: 3}
+      propertyPath: prefabs.Array.data[4]
+      value: 
+      objectReference: {fileID: 3522604904071995576, guid: 535d5dc2b7e9d49888a6759cd7b4e8b7,
+        type: 3}
+    - target: {fileID: 6908571583740437210, guid: 737dcebb0750cce4180e355397b3c9f8,
+        type: 3}
+      propertyPath: prefabs.Array.data[5]
+      value: 
+      objectReference: {fileID: 3522604904071995576, guid: d52b6df2fb0ea4344915032c4dcf9a49,
+        type: 3}
+    - target: {fileID: 6908571583740437210, guid: 737dcebb0750cce4180e355397b3c9f8,
+        type: 3}
+      propertyPath: prefabIcons.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: 728c5f9d1884d405ba1203c3503f5708,
+        type: 3}
+    - target: {fileID: 6908571583740437210, guid: 737dcebb0750cce4180e355397b3c9f8,
+        type: 3}
+      propertyPath: prefabIcons.Array.data[5]
+      value: 
+      objectReference: {fileID: 21300000, guid: 156d06c1a807d42c9932afd63a32b8f9,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 737dcebb0750cce4180e355397b3c9f8, type: 3}

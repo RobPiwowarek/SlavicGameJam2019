@@ -127,11 +127,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 69351382496963899, guid: 550d8930c4b88f84294fb9e47e9b2566,
-        type: 3}
-      propertyPath: m_Name
-      value: p1
-      objectReference: {fileID: 0}
     - target: {fileID: 69351382496963888, guid: 550d8930c4b88f84294fb9e47e9b2566,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -187,6 +182,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 69351382496963899, guid: 550d8930c4b88f84294fb9e47e9b2566,
+        type: 3}
+      propertyPath: m_Name
+      value: p1
+      objectReference: {fileID: 0}
     - target: {fileID: 69351382496963889, guid: 550d8930c4b88f84294fb9e47e9b2566,
         type: 3}
       propertyPath: fireCode
@@ -195,12 +195,17 @@ PrefabInstance:
     - target: {fileID: 69351382496963893, guid: 550d8930c4b88f84294fb9e47e9b2566,
         type: 3}
       propertyPath: m_JumpForce
-      value: 250
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 69351382496963892, guid: 550d8930c4b88f84294fb9e47e9b2566,
         type: 3}
       propertyPath: ladderMoveCode
       value: Vertical
+      objectReference: {fileID: 0}
+    - target: {fileID: 69351384241751787, guid: 550d8930c4b88f84294fb9e47e9b2566,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 550d8930c4b88f84294fb9e47e9b2566, type: 3}
@@ -221,7 +226,7 @@ GameObject:
   - component: {fileID: 64101742}
   - component: {fileID: 64101744}
   - component: {fileID: 64101743}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -269,7 +274,6 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -316,9 +320,9 @@ GameObject:
   - component: {fileID: 71399679}
   - component: {fileID: 71399678}
   - component: {fileID: 71399677}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Heart-1
-  m_TagString: Untagged
+  m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -356,7 +360,6 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -439,7 +442,6 @@ ParticleSystemRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
-  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -5232,7 +5234,6 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -5400,11 +5401,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 69351382496963899, guid: 550d8930c4b88f84294fb9e47e9b2566,
-        type: 3}
-      propertyPath: m_Name
-      value: p2
-      objectReference: {fileID: 0}
     - target: {fileID: 69351382496963888, guid: 550d8930c4b88f84294fb9e47e9b2566,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5459,6 +5455,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 69351382496963899, guid: 550d8930c4b88f84294fb9e47e9b2566,
+        type: 3}
+      propertyPath: m_Name
+      value: p2
       objectReference: {fileID: 0}
     - target: {fileID: 69351382496963889, guid: 550d8930c4b88f84294fb9e47e9b2566,
         type: 3}
@@ -6103,7 +6104,6 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -6434,6 +6434,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Hearth
       objectReference: {fileID: 0}
+    - target: {fileID: 960075486, guid: 8576e6acde4214fcb8638267cec83d4f, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: -6989819073429648054, guid: 8576e6acde4214fcb8638267cec83d4f,
         type: 3}
       propertyPath: values.list.Array.data[2].ContainedList.Array.size
@@ -6720,10 +6724,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1088445076}
   - component: {fileID: 1088445075}
-  m_Layer: 0
-  m_Name: Spawner
+  m_Layer: 10
+  m_Name: AvocadoSpawner
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -6740,9 +6744,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   theGoodies:
-  - {fileID: 7498960181629804677, guid: de4981779638446bc91a9ee54ff9e44f, type: 3}
-  waitingForNextSpawn: 10
-  theCountdown: 10
+  - {fileID: 8961520896747619567, guid: c7d40ecada5d76540bf82e081c688387, type: 3}
+  waitingForNextSpawn: 5
+  theCountdown: 5
   xMin: -25
   xMax: -17
   yMin: 0
@@ -6755,7 +6759,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1088445074}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17, y: 10, z: -16.520016}
+  m_LocalPosition: {x: -13.54, y: -2.2, z: -16.520016}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -6833,7 +6837,6 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -6979,7 +6982,6 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -7278,7 +7280,6 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -7386,7 +7387,6 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:

@@ -37,7 +37,7 @@ public class CameraCenterFollower : MonoBehaviour
         _time += Time.deltaTime;
         _cameraTransform.localPosition = new Vector3(
             Mathf.SmoothStep(cameraX, centerPoint.x, _time),
-            Mathf.SmoothStep(cameraY, changeY, _time),
+            Mathf.SmoothStep(cameraY, Math.Max(centerPoint.y, changeY), _time),
             _cameraPosition.z
         );
     }

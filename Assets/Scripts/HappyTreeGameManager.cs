@@ -22,6 +22,8 @@ public class HappyTreeGameManager : MonoBehaviour
     {
         Time.timeScale = 1f;
         GameObject.Find("MENU").SetActive(false);
+        GameObject.Find("INGAME").SetActiveRecursively(true);
+        moneyLabel = GameObject.Find("Coins")?.GetComponent<Text>();
     }
 
     public void Start()
@@ -44,9 +46,11 @@ public class HappyTreeGameManager : MonoBehaviour
     public void Update()
     {
         GameObject heart = GameObject.FindWithTag("Hearth");
+        if (moneyLabel) moneyLabel.text = "Money: " + money;
         if (!heart)
         {
             Time.timeScale = 0.0f;
+            GameObject.Find("INGAME").SetActive(false);
             GameObject.Find("END").gameObject.SetActiveRecursively(true);
         }
     }

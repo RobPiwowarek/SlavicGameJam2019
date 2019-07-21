@@ -1,11 +1,17 @@
 using System.Collections.Generic;
 using System.Linq;
+using UnityEngine;
 
 public class GetOneClosestStrategy : TargetSearchStrategy
 {
     private List<AttackTarget> attackTargets;
 
     public void Start()
+    {
+        RescanAttackTargets();
+    }
+
+    public void Update()
     {
         RescanAttackTargets();
     }
@@ -28,17 +34,16 @@ public class GetOneClosestStrategy : TargetSearchStrategy
 
     private void RescanAttackTargets()
     {
-        this.attackTargets = FindObjectsOfType<AttackTarget>()
-            .Where(o => o.CompareTag("Building") && o.GetComponent<AttackTarget>())
-            .Select(o => o.GetComponent<AttackTarget>())
+        Debug.Log(GameObject.FindGameObjectsWithTag("Building").Length);
+        
+        this.attackTargets = GameObject.FindGameObjectsWithTag("Building")
+            .Select(o => o.GetComponentInChildren<AttackTarget>())
             .OrderBy(o => (o.transform.position - this.transform.position).sqrMagnitude)
             .ToList();
-        
-        if (this.attackTargets.Count == 0) this.attackTargets = FindObjectsOfType<AttackTarget>()
-            .Where(o => o.CompareTag("Hearth") && o.GetComponent<AttackTarget>())
-            .Select(o => o.GetComponent<AttackTarget>())
-            .OrderBy(o => (o.transform.position - this.transform.position).sqrMagnitude)
-            .ToList();
-        
+
+        if (this.attackTargets.Count == 0)
+            this.attackTargets =
+                new List<AttackTarget>() {GameObject.FindWithTag("Hearth").GetComponent<AttackTarget>()};
+
     }
 }

@@ -75,7 +75,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 055bd7e259eaf9e43ba88512fd03f085, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_JumpForce: 575
+  m_JumpForce: 500
   m_CrouchSpeed: 0.36
   m_MovementSmoothing: 0.05
   m_AirControl: 1
@@ -110,9 +110,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 69351382496963893}
   runSpeed: 40
-  moveCode: Horizontal_Joystick
-  jumpCode: Jump_Joystick
-  ladderMoveCode: Vertical_Joystick
+  moveCode: Horizontal
+  jumpCode: Jump
+  ladderMoveCode: Vertical
 --- !u!114 &69351382496963889
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -130,7 +130,7 @@ MonoBehaviour:
   firePoint: {fileID: 69351384350362161}
   shake: {fileID: 0}
   shakeDuration: 0.25
-  fireCode: Fire1_Joystick
+  fireCode: Fire1
 --- !u!114 &6126741538456370726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -435,7 +435,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 853528327
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: ccd7c71c21c4d8f408bb35f7a018ab12, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -661,7 +661,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 853528327
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 7ee358ac4fa7aa642a17f667123b0f34, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

@@ -54,11 +54,11 @@ public class BuildingSelection : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("SelectLeft"))
+        if (Input.GetButtonDown("SelectLeft") || Input.GetButtonDown("SelectLeft_Joystick"))
         {
             prev();
         }
-        else if (Input.GetButtonDown("SelectRight"))
+        else if (Input.GetButtonDown("SelectRight") || Input.GetButtonDown("SelectRight_Joystick"))
         {
             next();
         }

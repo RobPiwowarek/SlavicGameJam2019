@@ -170,7 +170,7 @@ PrefabInstance:
     - target: {fileID: 69351382496963888, guid: 550d8930c4b88f84294fb9e47e9b2566,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 69351382496963888, guid: 550d8930c4b88f84294fb9e47e9b2566,
         type: 3}
@@ -5590,7 +5590,7 @@ PrefabInstance:
     - target: {fileID: 69351382496963888, guid: 550d8930c4b88f84294fb9e47e9b2566,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 69351382496963888, guid: 550d8930c4b88f84294fb9e47e9b2566,
         type: 3}
@@ -6704,7 +6704,7 @@ Transform:
   m_LocalScale: {x: 1.019018, y: 0.93828624, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &878248227
 GameObject:
@@ -7664,8 +7664,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   theGoodies:
   - {fileID: 8961520896747619567, guid: c7d40ecada5d76540bf82e081c688387, type: 3}
-  waitingForNextSpawn: 5
-  theCountdown: 5
+  waitingForNextSpawn: 10
+  theCountdown: 10
   xMin: -25
   xMax: -17
   yMin: 0
@@ -7678,7 +7678,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1088445074}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.54, y: -2.2, z: -16.520016}
+  m_LocalPosition: {x: -16.5, y: 2.4, z: -16.520016}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -7902,6 +7902,57 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bdab99cc2f0643faadf8ca91139c79b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1147430159
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1147430161}
+  - component: {fileID: 1147430160}
+  m_Layer: 10
+  m_Name: AvocadoSpawner (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1147430160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1147430159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e716361964a8442cc99717aa2cf98e2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theGoodies:
+  - {fileID: 8961520896747619567, guid: c7d40ecada5d76540bf82e081c688387, type: 3}
+  waitingForNextSpawn: 10
+  theCountdown: 10
+  xMin: -25
+  xMax: -17
+  yMin: 0
+  yMax: 12
+--- !u!4 &1147430161
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1147430159}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 18.5, y: 2.4, z: -16.520016}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 29
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1158685845
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8489,6 +8540,57 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d795d51d626d48b5a7246a890f2f057, type: 3}
+--- !u!1 &1444278198
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1444278200}
+  - component: {fileID: 1444278199}
+  m_Layer: 10
+  m_Name: BeeSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1444278199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1444278198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e716361964a8442cc99717aa2cf98e2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theGoodies:
+  - {fileID: 7041858792086138407, guid: 971ba0c382573f34496530f60f4fcd3a, type: 3}
+  waitingForNextSpawn: 5
+  theCountdown: 10
+  xMin: -25
+  xMax: -17
+  yMin: 0
+  yMax: 12
+--- !u!4 &1444278200
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1444278198}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -16.56, y: 6.7, z: -16.520016}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 30
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1658843617 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 354711178289786630, guid: 6edb540d7453c4b6bb78fb69f0960780,
@@ -9027,7 +9129,7 @@ Transform:
   - {fileID: 48063315}
   - {fileID: 439522213}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1762338839
 PrefabInstance:
@@ -9408,6 +9510,57 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1837528462}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1883282981
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1883282983}
+  - component: {fileID: 1883282982}
+  m_Layer: 10
+  m_Name: BeeSpawner (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1883282982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1883282981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e716361964a8442cc99717aa2cf98e2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theGoodies:
+  - {fileID: 7041858792086138407, guid: 971ba0c382573f34496530f60f4fcd3a, type: 3}
+  waitingForNextSpawn: 5
+  theCountdown: 10
+  xMin: -25
+  xMax: -17
+  yMin: 0
+  yMax: 12
+--- !u!4 &1883282983
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1883282981}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 18.6, y: 6.7, z: -16.520016}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 31
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1906556025
 PrefabInstance:
   m_ObjectHideFlags: 0

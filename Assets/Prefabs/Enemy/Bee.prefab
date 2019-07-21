@@ -111,6 +111,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7041858792086138401}
   - component: {fileID: 7041858792086138400}
+  - component: {fileID: -8927674221887976884}
+  - component: {fileID: 8304119794027948524}
   m_Layer: 10
   m_Name: Bee
   m_TagString: Enemy
@@ -154,9 +156,49 @@ MonoBehaviour:
   movement: {fileID: 3585370205742968273}
   attackBehaviour: {fileID: 4035572470329775911}
   firePoint: {fileID: 7041858792826121336}
-  bullet: {fileID: 9137193773060478303, guid: c7bfb3562b7496a49b28a3d00675a462, type: 3}
+  bullet: {fileID: 6533545697507838802, guid: 630367f77500c12428f2f99ac6533113, type: 3}
   flipped: 0
   idle: 0
+--- !u!114 &-8927674221887976884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7041858792086138407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c47e608c6408c9409e974bb372d8a35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthPoints: 50
+  maxHealthPoints: 50
+--- !u!61 &8304119794027948524
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7041858792086138407}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.19128656, y: 0.8703766}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.6780787, y: 2.7407532}
+  m_EdgeRadius: 0
 --- !u!1 &7041858792826121343
 GameObject:
   m_ObjectHideFlags: 0

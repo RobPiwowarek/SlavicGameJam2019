@@ -21,7 +21,7 @@ public class Builder : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((Input.GetButtonDown("ActionButton") || Input.GetButtonDown("ActionButton_Joystick")) && playerInRange)
+        if ((Input.GetButtonDown("ActionButton") || Input.GetButtonDown("Fire3_Joystick")) && playerInRange)
         {
             Build();
         }

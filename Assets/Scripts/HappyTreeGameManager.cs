@@ -13,6 +13,17 @@ public class HappyTreeGameManager : MonoBehaviour
 
     private float money;
 
+    public void Awake()
+    {
+        Time.timeScale = 0.0f;
+    }
+
+    public void StartTheGame()
+    {
+        Time.timeScale = 1f;
+        GameObject.Find("MENU").SetActive(false);
+    }
+
     public void Start()
     {
         Money = 1000;
@@ -30,12 +41,21 @@ public class HappyTreeGameManager : MonoBehaviour
             //moneyLabel.GetComponent<Text>().text = "Money: " + money;
         }
     }
-    
-    private float buildingSpeedModifier = 1.0f;
-    private float towerDamageModifier = 1.0f;
-    private float damageReductionModifier = 1.0f;
-    private float attackSpeedModifier = 1.0f;
-    private float maxHealthModifier = 1.0f;
+    public void Update()
+    {
+        GameObject heart = GameObject.FindWithTag("Hearth");
+        if (!heart)
+        {
+            Time.timeScale = 0.0f;
+            GameObject.Find("END").gameObject.SetActiveRecursively(true);
+        }
+    }
+
+    public float buildingSpeedModifier = 1.0f;
+    public float towerDamageModifier = 1.0f;
+    public float damageReductionModifier = 1.0f;
+    public float attackSpeedModifier = 1.0f;
+    public float maxHealthModifier = 1.0f;
 
     public void UpgradeBuildingSpeed()
     {

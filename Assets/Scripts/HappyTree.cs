@@ -27,13 +27,13 @@ public class HappyTree : MonoBehaviour
 
     private void Update()
     {
-        _time = _time + Time.deltaTime;
-        //Debug.Log(_time);
-        if (_time > advanceTime)
-        {
-            _time = 0f;
-            AdvanceLevel();
-        }
+//        _time = _time + Time.deltaTime;
+//        //Debug.Log(_time);
+//        if (_time > advanceTime)
+//        {
+//            _time = 0f;
+//            AdvanceLevel();
+//        }
     }
 
     [System.Serializable]

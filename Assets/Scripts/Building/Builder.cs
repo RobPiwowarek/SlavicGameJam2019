@@ -52,6 +52,7 @@ public class Builder : MonoBehaviour
                 build = (GameObject) Instantiate(buildPrefab, transform.position, Quaternion.identity);
                 build.transform.parent = gameObject.transform;
                 gameManager.Money -= build.GetComponent<BuildData>().CurrentLevel.cost;
+                buildingSelection.gameObject.SetActive(false);
             }
             else if (CanUpgradeBuild())
             {
@@ -68,13 +69,25 @@ public class Builder : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        // todo check player????
+        if (!other.CompareTag("Player"))
+        {
+            return;
+        }
+
+        if (build != null)
+        {
+            return;
+        }
         buildingSelection.gameObject.SetActive(true);
+
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        // todo check player???
+        if (!other.CompareTag("Player"))
+        {
+            return;
+        }
         buildingSelection.gameObject.SetActive(false);
     }
 }

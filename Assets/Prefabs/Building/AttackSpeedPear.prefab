@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3522604904071995582}
   - component: {fileID: 1482331135185558682}
   - component: {fileID: 466027133059798845}
+  - component: {fileID: 6727048636637340053}
   m_Layer: 0
   m_Name: AttackSpeedPear
   m_TagString: Untagged
@@ -27,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 3522604904071995576}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.746, y: 0.17, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 3522604904105482351}
   m_Father: {fileID: 0}
@@ -59,6 +60,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthPoints: 1000
   maxHealthPoints: 1000
+--- !u!114 &6727048636637340053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3522604904071995576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a877ac8fca91425ebd08f573ef30b1b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levels:
+  - cost: 0
+    visualization: {fileID: 3522604904071995576}
+    maxHealth: 100
 --- !u!1 &3522604904105482344
 GameObject:
   m_ObjectHideFlags: 0

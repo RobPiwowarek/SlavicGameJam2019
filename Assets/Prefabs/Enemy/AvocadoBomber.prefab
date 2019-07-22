@@ -426,6 +426,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jetpack
       objectReference: {fileID: 0}
+    - target: {fileID: 4728133620716042354, guid: 715ea1a8e7351b244b34af554d428aca,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 4728133620716042354, guid: 715ea1a8e7351b244b34af554d428aca,
+        type: 3}
+      propertyPath: m_ApplyActiveColorSpace
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 715ea1a8e7351b244b34af554d428aca, type: 3}
 --- !u!4 &8263165153730755090 stripped
@@ -588,6 +598,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3079882442920866223, guid: 7022f19be3bd9064db25e1e5d23b6f11,
+        type: 3}
+      propertyPath: seconds
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4320732155678085434, guid: 7022f19be3bd9064db25e1e5d23b6f11,
         type: 3}
       propertyPath: m_Name
@@ -597,11 +612,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 3079882442920866223, guid: 7022f19be3bd9064db25e1e5d23b6f11,
-        type: 3}
-      propertyPath: seconds
-      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7022f19be3bd9064db25e1e5d23b6f11, type: 3}

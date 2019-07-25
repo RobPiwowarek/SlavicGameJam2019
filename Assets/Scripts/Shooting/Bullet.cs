@@ -30,7 +30,15 @@ public class Bullet : MonoBehaviour
         
         enemy?.ReceiveDamage((int)this.damage);
 
-        if (monetize) FindObjectOfType<HappyTreeGameManager>().Money += 10f;
+        if (monetize)
+        {
+            if (enemy.CompareTag("Enemy")) enemy?.ReceiveDamage((int)this.damage);
+            FindObjectOfType<HappyTreeGameManager>().Money += 10f;
+        }
+        else
+        {
+            if (!enemy.CompareTag("Enemy")) enemy?.ReceiveDamage((int)this.damage);
+        }
 
     }
 }

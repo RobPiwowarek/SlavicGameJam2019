@@ -13,6 +13,10 @@ public class HappyTreeGameManager : MonoBehaviour
 
     private float money;
 
+    [SerializeField] private GameObject MENU;
+    [SerializeField] private GameObject INGAME;
+    [SerializeField] private GameObject END;
+
     public void Awake()
     {
         Time.timeScale = 0.0f;
@@ -21,9 +25,9 @@ public class HappyTreeGameManager : MonoBehaviour
     public void StartTheGame()
     {
         Time.timeScale = 1f;
-        GameObject.Find("MENU").SetActive(false);
-        GameObject.Find("INGAME").SetActiveRecursively(true);
-        moneyLabel = GameObject.Find("Coins")?.GetComponent<Text>();
+        MENU.SetActive(false);
+        INGAME.SetActiveRecursively(true);
+        moneyLabel = INGAME.GetComponentInChildren<Text>();
     }
 
     public void Start()
@@ -54,8 +58,8 @@ public class HappyTreeGameManager : MonoBehaviour
         if (!heart)
         {
             Time.timeScale = 0.0f;
-            GameObject.Find("INGAME").SetActive(false);
-            GameObject.Find("END").gameObject.SetActiveRecursively(true);
+            INGAME.SetActive(false);
+            END.SetActiveRecursively(true);
         }
     }
 
